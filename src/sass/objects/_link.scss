@@ -1,0 +1,36 @@
+.o-link {
+	padding-right: 2.5em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font: {
+		size: em(12);
+		weight: $black;
+	}
+	&:after {
+		@include icomoon;
+		position: absolute;
+		top: 2px;
+		right: 1em;
+		font-size: em(16);
+		content: "\e900";
+	}
+	
+	&:hover {
+		&:after {
+			animation-name: icon-wobble-horizontal;
+			animation-duration: 1s;
+			animation-timing-function: ease-in-out;
+		}
+	}
+
+	.o-2cols & {
+		@extend %abs;
+		left: 10px; bottom: 80px;
+	}
+	
+	&.top-right {
+		@extend %abs;
+		right: 10px;
+		top: 0;
+	}
+}

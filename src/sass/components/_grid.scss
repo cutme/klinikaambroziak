@@ -1,0 +1,22 @@
+.c-grid {
+	@extend %clear;
+	width: 1200px;
+	margin: 0 auto 80px auto;
+
+	&__item {
+		float: left;
+		padding: 10px;
+		
+		a {
+			display: block;
+			
+			img {
+				display: block;
+			}
+			
+			&:hover {
+				box-shadow: rgba(black, .3) 0 0 50px 0;
+			}
+		}
+	}
+}

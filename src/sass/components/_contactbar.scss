@@ -1,0 +1,58 @@
+.c-contactbar {
+	height: 595px;
+	background: {
+		repeat: no-repeat;
+		position: center;
+	}
+	
+	&__content {
+		@extend %vcenter;
+		right: 0;
+		width: 600px;
+	}
+	
+	address {
+		float: left;
+		width: 300px;
+		margin-bottom: 30px;
+		text-align: center;
+		font-size: em(16);
+		
+		p {
+			margin-bottom: 1em;
+		}
+	}
+	
+	p {
+		font-weight: $medium;
+	}
+	
+	.o-media {
+		margin-bottom: 20px;
+	}
+	
+	&__subscribe {
+		color: $c-gray--darker;
+		
+		h5 {
+			font-size: em(16);
+		}
+		
+		p {
+			font-size: em(34);
+		}
+	}
+	
+	a {
+		@extend %moves-down;
+
+		&:hover {
+			color: $c-black;
+
+			&:after {
+				background-color: $c-black;
+			}
+		}
+	}
+}
+

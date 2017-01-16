@@ -1,0 +1,118 @@
+.o-lead {
+	@extend %vcenter;
+	@extend %vline;
+	text-align: center;
+	
+	&--getUp {
+		top: 35%;
+	}
+	
+	&:after,
+	&:before {
+		.c-header--aplaBlack & {
+			background-color: $c-gray--darker;
+		}
+		
+		.c-header--aplaGray & {
+			background-color: white;
+		}
+		
+		.c-about__sections & {
+			background-color: $c-gray--darker;
+		}
+	}
+	
+	&:after {
+		bottom: -60px;
+	}
+	
+	&:before {
+		top: -60px;
+	}
+
+	&__big {
+		margin-bottom: 15px;
+		text-transform: uppercase;
+		font-weight: $black;
+		line-height: 1.2;
+		
+		.c-header--aplaBlack & {
+			color: $c-gray--brightest;
+		}
+		
+		.c-header--aplaGray & {
+			color: $c-gray--brightest;
+		}
+	}
+
+	&__medium {
+		opacity: .35;
+		padding: 0 4%;
+		font-size: em(22);
+		line-height: 1.45;
+		
+		.c-header & {
+			font-size: em(22);
+		}
+		
+		.c-header--apla & {
+			opacity: 1;
+			color: white;
+		}		
+	}
+	
+	&__medium,
+	&__small {
+		a {
+			@extend %underline;
+		}
+	}
+	
+	&__small {
+		padding: 25px 5% 0 5%;
+		line-height: 1.6;
+		font: {
+			size: em(16);
+			weight: $medium;
+		}
+		
+		a {
+			font-weight: $bold;
+			
+			&:before {
+				bottom: 0 !important;
+			}
+		}
+	}
+
+	.c-header &,
+	.c-about__sections & {
+		width: 520px;
+		
+		&__big {
+			letter-spacing: 6px;
+			font-size: em(48);
+		}
+	}
+	
+	&--full {
+		width: 100% !important;
+	}
+
+	.c-longbox & {
+		padding: 0 20px;
+		
+		&__big {
+			font-size: em(28);
+		}
+		
+		&__small {
+			margin-bottom: 25px;
+			line-height: 1.5;
+			font: {
+				weight: $semibold;
+				size: em(16);
+			}
+		}
+	}
+}

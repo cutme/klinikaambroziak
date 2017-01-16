@@ -1,0 +1,44 @@
+.c-newsletter {
+	width: 600px;
+	border-right: 1px solid rgba($c-gray--darker, .2);
+	padding: 0 95px 0 75px;
+	
+	h4, p {
+		color: white;
+	}
+
+	h4 {
+		margin-bottom: 15px;
+		text-transform: uppercase;
+		font: {
+			size: em(22);
+			weight: $extrabold;
+		}
+	}
+	
+	p {
+		margin-bottom: 15px;
+		font-size: em(14);
+	}
+	
+	input[type=email] {
+		float: left;
+		width: 290px;
+		height: 40px;
+		margin-right: 5px;
+		border: 1px solid rgba(white, .1);
+		
+		color: $c-gray;
+	}
+	
+	@include input-placeholder {
+		font-weight: $medium;
+		color: $c-gray;;
+	}
+	
+	.o-btn {
+		float: right;
+		width: 130px;
+		padding: 0;
+	}
+}

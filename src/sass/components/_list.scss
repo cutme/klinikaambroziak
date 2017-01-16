@@ -1,0 +1,80 @@
+.c-list {
+	z-index: 5;
+	top: -200px;
+	margin-bottom: -100px;
+	
+	li {
+		position: relative;
+		
+		&:after {
+			@extend %icomoon;
+			@extend %vcenter;
+			position: absolute;
+			right: 50px;
+			
+		}
+		
+		&:first-child {
+			.c-list__link {
+				border-top: 1px solid $c-gray--brighter;
+			}
+		}
+	}
+	
+	&--arrow {
+		li {
+			&:after {
+				content: "\e900";
+			}
+		}
+	}
+	
+	&--download {
+		li {
+			&:after {
+				font-size: em(26);
+				color: $c-gray--darker;
+				content: "\e902";
+			}
+		}
+	}
+
+	&__link {
+		transition-duration: 100ms;
+		display: flex;
+		position: relative;
+		min-height: 100px;
+		background-color: white;
+		padding: 0 100px 0 50px;
+		border: {
+			bottom: 1px solid $c-gray--brighter;
+			left: 1px solid $c-gray--brighter;
+			right: 1px solid $c-gray--brighter;
+		}
+		align-items: center;
+		
+		&:hover {
+			background-color: $c-gray--brightest;
+		}
+	}
+
+	&__name {
+		position: relative;
+		
+		font: {
+			size: em(22);
+			weight: $black;
+		}		
+	}
+	
+	&__desc {
+		@extend %rel;
+		top: 3px;
+
+		&:before {
+			margin-left: 6px;
+			content: ' / ';
+		}
+	}
+}
+

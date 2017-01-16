@@ -1,0 +1,105 @@
+@keyframes icon-wobble-horizontal {
+	16.65% {
+		transform: translateX(6px);
+	}
+
+	33.3% {
+		transform: translateX(-5px);
+	}
+
+	49.95% {
+		transform: translateX(4px);
+	}
+
+	66.6% {
+		transform: translateX(-2px);
+	}
+
+	83.25% {
+		transform: translateX(1px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes jiggle {
+	0% {
+		transform: none;
+	}
+	25% {
+		transform: rotateZ(5deg);;
+	}
+
+	75% {
+		transform: rotateZ(-5deg)
+	}
+	100% {
+		transform: none;
+	}
+}
+
+%moves-down {
+	transition: all .5s ease;
+	position: relative;
+	
+	&:after {
+		@extend %abs-after;
+		opacity: 0;
+		transition: all .5s ease;
+		width: 100%; height: 2px;
+		left: 0;
+		bottom: 50%;
+		z-index: -1;
+	}
+	
+	&:hover {
+		&:after {
+			opacity: 1;
+			bottom: -10px;
+			width: 100%;
+		}
+	}
+}
+
+%underline-right--attr {
+	transition: all .5s ease;
+	position: relative;
+	
+	&:after {
+		@extend %abs-after;
+		opacity: 0;
+		transition: all 1s ease;
+		width: 0; height: 1px;
+		left: 0;
+		bottom: -3px;
+		z-index: -1;
+	}
+}
+
+%underline-right {
+	@extend %underline-right--attr;
+	
+	&:hover {
+		&:after {
+			opacity: 1;
+			width: 100%;
+		}
+	}
+}
+
+.anim {
+	transform: translateY(100px);
+	opacity: 0;
+	
+	&.is-visible {
+		animation: moveUp 0.65s ease forwards;
+	}
+}
+
+@keyframes moveUp {
+	0% { }
+	100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
+}
+

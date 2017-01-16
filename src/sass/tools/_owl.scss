@@ -1,0 +1,106 @@
+.owl-carousel {
+	@extend %anim-slow;
+	display: block;
+	overflow: hidden;
+
+	&--header {
+		height: 615px;
+		margin-bottom: 80px;
+	}
+	
+	&:before {
+		@extend %anim;		
+		@extend %abs-after;
+		background: {
+			image: url(../img/assets/grid.svg);
+			repeat: no-repeat;
+			position: center;
+			size: 30px 30px;
+			color: white;
+		}
+		width: 100%; height: 100%;
+		z-index: 100;
+			
+	}	
+	
+	&.is-loaded {
+		&:before {
+			transform: translateY(-100%);
+			opacity: 0;
+		}
+	}
+}
+.owl-nav,
+.owl-dots {
+	@extend %abs;
+	bottom: 20px;
+}
+
+.owl-nav {
+	left: 50%;
+	width: 115px;
+	transform: translateX(-590px);
+
+	.owl-prev,
+	.owl-next {
+		@extend %anim-easeOut;
+		float: left;
+		width: 55px; height: 55px;
+		border: 1px solid rgba(black, .15);
+		margin-right: 5px;
+		text-align: center;
+		line-height: 53px;
+		
+		i {
+			@extend %anim-easeOut;
+			opacity: .2;
+		}
+		
+		&:hover {
+			border-color: black;
+			
+			i {
+				opacity: 1;
+			}
+		}
+		
+		&:after {
+			@include icomoon;
+		}
+	}
+	
+	.owl-prev {
+		transform: scaleX(-1);
+	}
+	
+	.owl-next {
+		margin-right: 0;
+	}
+}
+
+.owl-dots {
+	right: 50%;
+	height: 20px;
+	transform: translateX(590px);
+	
+	.owl-dot {
+		display: inline-block;
+		width: 5px;
+		height: 20px;
+		background-color: black;
+		margin-right: 15px;
+		opacity: .15;
+
+		&.active {
+			opacity: 1;
+		}
+		
+		&:last-of-type {
+			margin-right: 0;
+		}
+		
+		&:hover {
+			opacity: 1;
+		}
+	}
+}

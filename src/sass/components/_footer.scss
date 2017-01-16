@@ -1,0 +1,16 @@
+.c-footer {
+	@extend %clear;
+	background-color: $c-black;
+	padding: 60px 0 70px 0;
+
+	&__item {
+		@extend %rel;
+		float: left;
+		min-height: 180px;
+		
+		&--social {
+			float: right;
+			width: 280px;
+		}
+	}
+}

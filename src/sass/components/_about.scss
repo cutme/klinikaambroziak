@@ -1,0 +1,259 @@
+.c-about {
+
+	&__baner {
+		position: relative;
+		background: {
+			image: url(../img/onas/onas-zapraszamy.jpg);
+			position: center;
+		}
+		height: 575px;
+		margin-bottom: 40px;
+		
+		.o-wrap {
+			@extend %rel;
+		}
+		
+		article {
+			@extend %vcenter;
+			display: block;
+			left: 675px;
+			width: 380px;
+			
+			h4 {
+				margin-bottom: 1em;
+				line-height: 1.2;
+				font-size: em(34);
+			}
+			
+			p {
+				margin-bottom: 1em;
+				font-size: em(16);
+			}
+		}
+	}
+
+	&__row {
+		@extend %clear;
+		@extend %rel;
+		overflow: hidden;
+		margin-bottom: 40px;
+		padding: 120px 0;
+		
+		&:before {
+			@extend %abs-after;
+			top: 0;
+			width: calc( ((100% - 1180px)/2) + 730px );
+			height: 100%;
+		}
+		
+		cite {
+			position: absolute;
+			bottom: 30px;
+			opacity: .12;
+			width: calc( ((100% - 1180px)/2) + 630px );
+			font-size: em(300);
+			line-height: 1;
+			white-space: nowrap;
+		}
+		
+		&:nth-child(odd) {
+			.c-about__image {
+				float: right;
+			}
+			
+			.c-about__info {
+				float: left;
+				padding-left: 75px;
+			}
+			
+			&:before {
+				right: 0;
+			}
+			
+			cite {
+				left: 0;
+				text-align: right;
+			}
+		}
+		
+		&:nth-child(even) {
+			.c-about__image {
+				float: left;
+			}
+
+			.c-about__info {
+				float: right;
+				width: 600px;
+				padding-right: 75px;
+			}
+
+			&:before {
+				left: 0;
+			}
+			
+			cite {
+				right: 0;
+			}
+		}
+
+		&.blue--brightest {
+			&:before {
+				background-color: $c-blue--brightest;
+			}
+		}
+		
+		&.gray--brightest {
+			&:before {
+				background-color: $c-gray--brightest;
+			}
+		}
+		
+		&.orange--brighter {
+			&:before {
+				background-color: $c-orange--brighter;
+			}
+		}
+		
+		&.pink {
+			&:before {
+				background-color: $c-pink;
+			}
+		}
+		
+		&.violet {
+			&:before {
+				background-color: $c-violet;
+			}
+		}
+	}
+	
+	&__image {
+		box-shadow: rgba(black, .2) 0 0 70px;
+		
+		.o-media {
+			display: block;
+		}
+	}
+	
+	&__desc {
+		line-height: 1.6;
+		font: {
+			size: em(16);
+			weight: $medium;
+		}
+	}
+	
+	&__info {
+		width: 555px;
+	}
+	
+	&__links {
+		@extend %clear;
+		margin-bottom: 40px;
+		
+		li {
+			&:nth-child(1) a,
+			&:nth-child(2) a,
+			&:nth-child(3) a {
+				border-bottom: none;
+			}
+			
+			&:nth-child(3n+2) a {
+				border-left: none;
+				border-right: none;
+			}
+		}
+		
+		a {
+			@extend %rel;
+			display: block;
+			width: 400px; height: 294px;
+			background-color: white;
+			border: 1px solid $c-gray--brighter;
+			
+			&:before {
+				@extend %icomoon;
+				@extend %anim;
+				@extend %abs-after;
+				right: 15px; bottom: 15px;
+				z-index: 10;
+				content: "\e900";
+			}			
+			
+			&:hover {
+				background-color: $c-black;
+				
+				.o-lead {
+					.o-lead__big {
+						color: $c-gray--darker;
+					}
+					
+					&:before,
+					&:after {
+						background-color: white;
+					}
+				}
+				
+				&:before {
+					color: white;
+				}
+			}
+		}
+
+		li {
+			float: left;
+		}
+		
+		.o-lead {
+			@extend %center-middle;
+			
+			&:after {
+				display: none;
+			}
+
+			.o-lead__big {
+				white-space: nowrap;
+				font-size: em(28);
+				letter-spacing: 6px;
+			}			
+		}
+	}
+	
+	&__sections {
+		@extend %clear;
+		margin-bottom: 40px;
+
+		li {
+			@extend %rel;
+			float: left;
+			width: calc(50% - 10px);
+			
+			&:last-child {
+				float: right;
+			}
+		}
+		
+		.o-lead {
+			@extend %center-middle;
+			z-index: 100 !important;			
+		}
+		
+		.o-lead__big {
+				
+		}
+
+		.o-media {
+			display: block;
+		}
+	}
+	
+	&__title {
+		display: block;
+		margin-bottom: 1em;
+		line-height: 1.2;
+		font: {
+			size: em(34);
+			weight: $bold;
+		}
+	}
+}

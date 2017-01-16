@@ -1,0 +1,31 @@
+.c-social {
+	&__lead {
+		display: inline-block;
+		vertical-align: super;
+		color: white;
+	}
+	
+	[class^="icon-"] {
+		display: inline-block;
+		margin-left: 10px;
+		color: white;
+		
+		&:before {
+			@extend %anim;
+		}
+		
+		&:hover {
+			animation: jiggle ease-in-out 400ms infinite;
+		}
+	}
+	
+	.icon-facebook-square {
+		font-size: em(28);
+	}
+	
+	.icon-youtube-play {
+		position: relative;
+		top: 3px;		
+		font-size: 36px;
+	}
+}

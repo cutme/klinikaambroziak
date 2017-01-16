@@ -1,0 +1,46 @@
+.c-longbox {
+	@extend %clear;
+	background-color: rgba($c-gray--darker, .1);
+
+	li {
+		float: left;
+		width: 300px;
+		padding: 0 10px;
+		
+		.o-lead__small {
+			color: $c-gray--darker;
+		}
+		
+		&:nth-child(even) {
+			.o-lead__big,
+			.o-lead__small {
+				color: white;
+			}
+		}
+
+		&:nth-child(3),
+		&:nth-child(4) {
+			.o-lead__big {
+				padding-top: 34px;
+			}
+		}
+	}
+
+	&__item {
+		@extend %anim;
+		position: relative;				
+		
+		&:hover {
+			box-shadow: rgba(black, .1) 0 0 50px 0;
+		}
+	}
+	
+	.o-media {
+		display: block;
+	}
+	
+	.o-lead {
+		top: 60%;
+		z-index: 10;
+	}
+}

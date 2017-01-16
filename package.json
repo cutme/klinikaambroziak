@@ -1,0 +1,14 @@
+{
+  "name": "www.klinikaambroziak.pl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bartosz mediger <cutme.pl>",
+  "license": "ISC",
+  "dependencies": {
+    "gulp-util": "^3.0.7"
+  }
+}

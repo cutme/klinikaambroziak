@@ -1,0 +1,128 @@
+.o-btn {
+	@extend %rel;
+	display: inline-block;	
+	height: 40px;
+	background-color: white;
+	border-radius: 2px;
+	padding: 0 40px;
+	font: {
+		size: em(12);
+		weight: $black;
+	}
+	line-height: 40px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	cursor: pointer;
+	transform: perspective(1px) translateZ(0);
+
+	&:after {
+		@extend %abs-after;
+		left: 0;
+		width: 100%;
+	}
+
+	i {
+		@extend %anim-easeOut;
+		margin-right: 5px;
+	}
+
+	&--black,
+	&--gray,
+	&--transparent,
+	&--white {
+	
+		&:after {
+			@extend %anim-easeOut;
+			transition-timing-function: ease-out;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+			transform-origin: 50%;
+			transform: scaleY(0);
+		}
+	
+		&:hover {
+			&:after {
+				transform: scaleY(1);
+			}
+			
+			i {
+				color: white;
+			}
+		}
+	}
+
+	&--border {
+		&.o-btn--black {
+			border: 1px solid rgba($c-black, .5);
+		}
+		
+		&.o-btn--gray {
+			border: 1px solid rgba($c-gray, .5);
+		}
+		
+		&.o-btn--white {
+			border: 1px solid white;
+			
+			&:hover {
+				border-color: $c-gray;
+			}
+		}
+	}
+
+	&--gray {
+
+		i {
+			color: $c-gray--darker;
+		}
+
+		&:after {
+			background-color: $c-gray;
+		}
+
+		&:hover {
+			color: white;			
+		}
+	}
+
+	&--black {
+		color: $c-black;
+
+		&:after {
+			background-color: $c-black;
+		}
+		
+		&:hover {
+			background-color: $c-black;
+			color: white;
+			
+			i {
+				color: white;
+			}
+		}
+	}
+	
+	&--white {
+		background-color: $c-black;
+		color: white;
+
+		&:after {
+			background-color: $c-gray;
+		}
+		
+		&:hover {
+			//background-color: $c-black;
+			color: white;
+			
+			i {
+				color: white;
+			}
+		}
+	}
+	
+	&--transparent {
+		background-color: transparent;
+	}
+}

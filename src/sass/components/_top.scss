@@ -1,0 +1,6 @@
+.c-top {
+	@extend %rel;
+	z-index: 10;
+	height: 185px;
+	border-bottom: 1px solid rgba($c-gray, .5);
+}

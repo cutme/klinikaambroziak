@@ -1,0 +1,9 @@
+.c-copyrights {
+	@extend %abs;
+	left: 0; bottom: 0;
+	font: {
+		size: em(12);
+		weight: $medium;
+	}
+	color: rgba($c-gray, .5);
+}

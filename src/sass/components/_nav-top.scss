@@ -1,0 +1,56 @@
+.c-nav {
+	@extend %abs;
+	top: 130px;
+	right: 10px;
+	
+	li {
+		display: inline-block;
+		padding: 0 35px;
+		
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+	
+	a {
+		font: {
+			family: $serif;
+			weight: $bold;
+		}
+	}
+	
+	&__link {
+		@extend %rel;
+		@extend %vline;
+		display: block;
+
+		&:before {
+			opacity: 0;
+		}
+
+		&:after {
+			@extend %anim;
+			bottom: -50px;
+			height: 0;
+			opacity: 0;
+		}		
+		
+		&:hover,
+		&.is-active {
+			&:after {
+				transform: rotate(180deg);
+				height: 40px;
+				opacity: 1;
+			}
+		}
+	}
+	
+	.o-btn {
+		text-transform: none;
+		letter-spacing: normal;
+		font: {;
+			size: em(14);
+		}
+		
+	}
+}

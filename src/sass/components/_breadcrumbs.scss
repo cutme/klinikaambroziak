@@ -1,0 +1,48 @@
+.c-breadcrumbs {
+	padding: 35px 0;
+	letter-spacing: 2px;
+	font: {
+		size: em(12);
+		weight: $medium;
+	}
+	
+	.c-header--aplaGray & {
+		color: $c-black;
+	}
+	
+	.c-header--aplaBlack & {
+		color: $c-gray;
+	}
+	
+	.c-header & {
+		@extend %center;
+		z-index: 5 !important;
+		width: $grid-base-width+px;
+		top: 0;
+	}
+
+	&__item {		
+		span {
+			@extend %underline;	
+		}
+
+		&:after {
+			@extend %icomoon;
+			margin-left: 6px;
+			font-size: 8px;
+			content: "\e900";
+		}
+		
+		&--current {
+			font-weight: $black;
+			
+			&:after {
+				display: none;
+			}
+		}
+	}
+	
+	&.border {
+		border-bottom: 1px solid rgba($c-gray--darker, .5);
+	}
+}

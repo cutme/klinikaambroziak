@@ -1,0 +1,53 @@
+.c-biglist {
+	margin-bottom: 100px;
+
+	&__date {
+		display: block;
+		margin-bottom: 25px;
+		font-weight: $black;
+		color: $c-gray;
+	}
+
+	&__link {
+		display: block;
+		transition-duration: 200ms;
+		position: relative;
+		min-height: 230px;
+		background-color: white;
+		border-bottom: 1px solid rgba($c-gray--darker, .5);
+
+		.o-wrap {
+			width: 1200px;
+			height: 100%;
+			margin: 0 auto;
+			padding: 25px 90px;
+			
+			&:after {
+				@extend %icomoon;
+				position: absolute;
+				right: 40px;
+				bottom: 45px;
+				content: "\e900";
+			}
+		}
+		
+		&:hover {
+			background-color: $c-gray--brightest;
+		}
+	}
+
+	&__title {
+		display: block;
+		margin-bottom: .8em;
+		font-family: $serif;
+		font-size: em(34);	
+	}
+	
+	&__desc {
+		display: block;
+		margin-bottom: 1em;
+		font-size: em(16);
+		font-weight: $medium;
+	}
+}
+

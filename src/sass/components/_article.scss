@@ -1,0 +1,41 @@
+.c-article {
+	padding: 15px 150px;
+
+	&__date {
+		margin-bottom: 2em;
+		font-weight: $black;
+	}
+	
+	&__title {
+		margin-bottom: .7em;
+		font-size: em(40);
+		line-height: 1.2;
+	}
+
+	.photo {
+		@extend %clear;
+		margin: 0 -140px;
+		padding: 40px 0;
+		
+		img {
+			display: block;
+		}
+		
+		&--2cols {
+			img {
+				float: left;
+				width: calc(50% - 10px);
+	
+				&:last-of-type {
+					float: right;
+				}
+			}
+		}
+		
+		&--center {
+			img {
+				margin: 0 auto;
+			}
+		}
+	}
+}

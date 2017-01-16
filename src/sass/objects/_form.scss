@@ -1,0 +1,40 @@
+.o-form {
+
+	input, textarea {
+		padding: 0 20px;
+	}
+	
+	textarea {
+		border: 1px solid rgba($c-gray--darker, .5);
+		padding: {
+			top: 20px;
+			bottom: 20px;
+		}
+		font-size: em(12);
+	}
+	
+	input {
+		&[type=text] {
+			
+		}
+	}
+	
+	input {
+		&[type=text],
+		&[type=email] {
+			height: 46px;
+			border: 1px solid rgba($c-gray--darker, .5);
+		}
+	}
+	
+	&__row {
+		@extend %clear;
+		margin-bottom: 10px;
+	}
+	
+	.c-newsletter & {
+		.o-form__row {
+			margin-bottom: 20px;
+		}
+	}
+}

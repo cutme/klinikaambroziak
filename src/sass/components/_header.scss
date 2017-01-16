@@ -1,0 +1,34 @@
+.c-header {
+	position: relative;
+	z-index: 1;
+	height: 615px;
+	background: {
+		position: center;
+		size: cover;
+	}
+	
+	&--low {
+		height: 415px;
+	}
+	
+	&--apla {
+		&:after {
+			@extend %abs-after;
+			left: 0; top: 0;
+			width: 50%;
+			height: 100%;
+		}
+	}
+
+	&--aplaBlack {
+		&:after {
+			background-color: rgba($c-black, .85);
+		}
+	}
+	
+	&--aplaGray {
+		&:after {
+			background-color: rgba($c-gray--darker, .95);
+		}
+	}
+}
