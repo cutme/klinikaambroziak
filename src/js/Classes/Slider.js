@@ -28,12 +28,13 @@
 
     	var options = {
     		autoplay: true,
+    		autoplayTimeout: 6000,
     		lazyLoad: true,
 	    	loop: true,
 			nav: true,
 			navText: ['<i class="icon-arrow"></i>', '<i class="icon-arrow"></i>'],
 			items: 1,
-			smartSpeed: 1000
+			smartSpeed: 1600
     	}, owl = $('.owl-carousel');
     	
     	owl.on('initialized.owl.carousel', function(event) {
