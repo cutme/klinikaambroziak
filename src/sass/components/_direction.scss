@@ -1,0 +1,155 @@
+.c-direction {
+	@extend %rel;
+	
+	
+	.dot {
+		display: block;
+		background-color: white;
+		border-radius: 50%;
+		border: 2px solid $c-gray--darker;
+		width: 10px;
+		height: 10px;
+	}
+	
+	.frame {
+		display: inline-block;
+		background-color: white;
+		border-radius: 3px;
+		border: 1px solid $c-gray--brightest;
+		padding: 2px 20px 4px 20px;
+		font: {
+			size: em(16);
+			weight: $bold;
+		}
+	}
+	
+	.point {
+		position: relative;
+	}
+	
+	.tooltip {
+		position: absolute;
+		left: 50%; bottom: 30px;
+		transform: translateX(-50%);
+		text-align: center;
+		white-space: nowrap;
+	}
+	
+	.o-biglead {
+		right: 0; bottom: -100px;
+		width: 50%;
+		overflow: hidden;
+		color: $c-gray--darker;
+	}	
+
+	&__item {
+		width: 880px;
+		margin: 0 auto;
+	}
+	
+	&__logo {
+		width: 280px;
+		margin: 0 auto 35px auto;
+	}
+
+	&__lead {
+		margin-bottom: 110px;
+		font-size: em(18);
+	}
+	
+	&__line {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 1px;
+		background-color: $c-gray--brightest;
+		margin-bottom: 180px;
+		
+		&--warszawa {
+			justify-content: space-between;
+			padding-right: grid(80, 880);
+
+			.point--1 {
+				margin-left: 20px;
+			}
+		}
+		
+		&--piaseczno1 {
+			.point--2,
+			.point--5,
+			.point--7 {
+				margin-left: grid(10, 880);
+			}
+			
+			.point--3 {
+				margin-left: grid(30, 880);
+			}
+			
+			.point--4 {
+				margin-left: grid(80, 880);
+			}
+			
+			.point--6 {
+				margin-left: grid(140, 880);
+			}
+			
+			.point--8 {
+				margin-left: grid(30, 880);
+			}
+			
+			.point--9 {
+				margin-left: grid(200, 880);
+			}
+		}
+		
+		&--piaseczno2 {
+			.point--2,
+			.point--5 {
+				margin-left: grid(10, 880);
+			}
+			
+			.point--3 {
+				margin-left: grid(30, 880);
+			}
+			
+			.point--4 {
+				margin-left: grid(265, 880);
+			}
+			
+			.point--6 {
+				margin-left: grid(30, 880);
+			}
+			
+			.point--7 {
+				margin-left: grid(200, 880);
+			}
+		}
+	}
+	
+	.icon-bus,
+	.icon-tram,
+	.icon-metro {
+		display: block;
+		
+		span {
+			&:before {
+				color: $c-gray--darker;
+			}
+		}
+	}
+	
+	.icon-bus {
+		transform: scaleX(-1);
+		font-size: em(26);		
+	}
+	
+	.icon-metro {
+		
+		font-size: em(34);
+	}
+	
+	.icon-tram {
+		font-size: em(36);
+		margin-top: -12px;
+	}
+}

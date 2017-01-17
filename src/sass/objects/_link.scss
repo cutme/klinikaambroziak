@@ -6,6 +6,7 @@
 		size: em(12);
 		weight: $black;
 	}
+
 	&:after {
 		@include icomoon;
 		position: absolute;

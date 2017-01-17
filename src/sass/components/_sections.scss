@@ -1,0 +1,23 @@
+.c-sections {
+	@extend %clear;
+	margin-bottom: 40px;
+
+	li {
+		@extend %rel;
+		float: left;
+		width: calc(50% - 10px);
+		
+		&:last-child {
+			float: right;
+		}
+	}
+	
+	.o-lead {
+		@extend %center-middle;
+		z-index: 100 !important;			
+	}
+
+	.o-media {
+		display: block;
+	}
+}

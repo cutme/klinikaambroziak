@@ -9,11 +9,11 @@
 		amb.Layout.showOnScroll();
 		amb.Layout.svgInline();
 		amb.Slider.init();
-		//amb.Team.init();
 		amb.Helper.isInView();
 
-		amb.Helper.exist('#team') && amb.Team.init();
-		
+		amb.Helper.exist('#map') && amb.googleMap.init();
+		amb.Helper.exist('#team') && amb.Team.init();		
+
 	});
 		
 }(window, document, jQuery, window.amb = window.amb || {}));

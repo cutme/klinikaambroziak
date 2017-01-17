@@ -6,16 +6,15 @@
 	&__item {
 		float: left;
 		padding: 10px;
+		cursor: pointer;
 		
-		a {
+		img {
 			display: block;
-			
+		}
+		
+		&:hover {
 			img {
-				display: block;
-			}
-			
-			&:hover {
-				box-shadow: rgba(black, .3) 0 0 50px 0;
+			box-shadow: rgba(black, .3) 0 0 50px 0;
 			}
 		}
 	}

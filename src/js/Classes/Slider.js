@@ -35,7 +35,7 @@
 			navText: ['<i class="icon-arrow"></i>', '<i class="icon-arrow"></i>'],
 			items: 1,
 			smartSpeed: 1600
-    	}, owl = $('.owl-carousel');
+    	}, owl = $('#homeSlider .owl-carousel');
     	
     	owl.on('initialized.owl.carousel', function(event) {
 	    	owl.addClass('is-loaded');

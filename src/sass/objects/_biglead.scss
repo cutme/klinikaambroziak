@@ -1,0 +1,7 @@
+.o-biglead {
+	@extend %abs;
+	opacity: .12;
+	font-size: em(300);
+	line-height: 1;
+	white-space: nowrap;
+}
