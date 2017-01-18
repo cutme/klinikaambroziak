@@ -21,6 +21,7 @@ var gulp         = require('gulp'),
     fileinclude  = require('gulp-file-include'),
     autoprefixer = require('gulp-autoprefixer'),
     livereload   = require('gulp-livereload'),
+    gcmq = require('gulp-group-css-media-queries'),
     browserSync  = require('browser-sync').create();
 
 var config = {
@@ -85,6 +86,7 @@ gulp.task('sass', function()
             add: true,
             remove: false
         }))
+      .pipe(gcmq())
       .pipe(cssmin())
       .pipe(gulp.dest('web/css/'))
       .pipe(browserSync.stream());
@@ -114,21 +116,6 @@ gulp.task('manifest', function(){
         .pipe(gulp.dest('web'));
 });
 
-gulp.task('sprite', function () {
-    var spriteData = gulp.src('src/sprites/*.png').pipe(spritesmith({
-        imgName     : 'sprites.png',
-        cssName     : '_sprites.scss',
-        cssTemplate : 'sprites.css.handlebars',
-        padding     : 2,
-        algorithm   : 'top-down'
-    }));
-    
-    var imgStream = spriteData.img.pipe(gulp.dest('src/img/'));
-    var cssStream = spriteData.css.pipe(gulp.dest('src/sass/tools/'));
-
-    return merge(imgStream, cssStream);
-});
-
 gulp.task('fileinclude', function() {
     gulp.src(['src/*.html'])
         .pipe(fileinclude({
@@ -147,7 +134,14 @@ gulp.task('htmlhint', function () {
   ]).pipe(htmlhint.reporter())
     .pipe(htmlhint.failReporter({ suppress: true }));
 });
+/*
 
+gulp.task('group-css-media-queries', function () {
+    gulp.src('src/style.css')
+        .pipe(gcmq())
+        .pipe(gulp.dest(config.dist.js))
+});
+*/
 
 gulp.task('watch', function() {
     livereload.listen();

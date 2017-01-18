@@ -1,7 +1,7 @@
+$newsletter_left_padding:	75;
+$newsletter_right_padding:	95;
+
 .c-newsletter {
-	width: 600px;
-	border-right: 1px solid rgba($c-gray--darker, .2);
-	padding: 0 95px 0 75px;
 	
 	h4, p {
 		color: white;
@@ -22,23 +22,42 @@
 	}
 	
 	input[type=email] {
-		float: left;
-		width: 290px;
 		height: 40px;
-		margin-right: 5px;
 		border: 1px solid rgba(white, .1);
-		
 		color: $c-gray;
 	}
 	
 	@include input-placeholder {
 		font-weight: $medium;
-		color: $c-gray;;
+		color: $c-gray;
+	}
+
+	@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+		width: grid(600, $grid-base-width - 2 * $padding);
+		border-right: 1px solid rgba($c-gray--darker, .2);
+		padding: 0 grid($newsletter_right_padding, $grid-base-width - 2 * $padding) 0 grid($newsletter_left_padding, $grid-base-width - 2 * $padding);
+		
+		input[type=email] {
+			float: left;
+			width: grid(290, 600 - $newsletter_right_padding - $newsletter_left_padding);
+			margin-right: 5px;
+		}
+
+		.o-btn {
+			float: right;
+			width: grid(130, 600 - $newsletter_right_padding - $newsletter_left_padding );
+			padding: 0;
+		}
 	}
 	
-	.o-btn {
-		float: right;
-		width: 130px;
-		padding: 0;
+	@media screen and ( max-width: $tablet_portrait + px ) {
+	
+		padding-bottom: 50px;
+		margin-bottom: 45px;
+		border-bottom: 1px solid rgba($c-gray--darker, .2);
+	
+		input[type=email] {
+			margin-bottom: 20px;
+		}
 	}
 }

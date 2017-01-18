@@ -6,4 +6,9 @@
 		weight: $medium;
 	}
 	color: rgba($c-gray, .5);
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		position: relative;
+		left: auto; bottom: auto;
+	}
 }

@@ -4,8 +4,9 @@
 
 	li {
 		float: left;
-		width: 300px;
-		padding: 0 10px;
+		width: grid(300);
+		padding: 0 grid(10);
+		overflow: hidden;
 		
 		.o-lead__small {
 			color: $c-gray--darker;
@@ -42,5 +43,36 @@
 	.o-lead {
 		top: 60%;
 		z-index: 10;
+	}
+	
+	@media screen and ( max-width: $tablet+px ) {
+	
+		.o-lead {
+			top: 50%;
+			
+			&:before, &:after {
+				display: none;
+			}
+			
+			.o-lead__big {
+				font-size: em(26);
+			}
+			
+			.o-lead__small {
+				font-size: em(14);
+			}
+		}
+	}
+	
+	@media screen and ( max-width: $tablet_portrait+px ) {
+		li {
+			width: 280px;
+			height: 370px;
+			padding: 0 10px;
+		}
+		
+		&__item {
+			height: 370px;
+		}
 	}
 }

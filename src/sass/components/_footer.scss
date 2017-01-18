@@ -5,12 +5,27 @@
 
 	&__item {
 		@extend %rel;
-		float: left;
-		min-height: 180px;
 		
-		&--social {
-			float: right;
-			width: 280px;
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+			float: left;
+			min-height: 180px;
+		
+			&--social {
+				float: right;
+				width: grid(280, $grid-base-width - 2 * $padding);
+			}
+		}
+		
+	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		text-align: center;
+		padding-top: 45px;
+		
+		&__item {
+			&--social {
+				margin-bottom: 45px;
+			}
 		}
 	}
 }

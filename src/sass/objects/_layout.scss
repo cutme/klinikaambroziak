@@ -3,4 +3,12 @@
 		top: 80px;
 		bottom: 80px;
 	}
+	
+	@media screen and ( max-width: $tablet + px ) {
+		padding: {
+			top: 40px;
+			bottom: 40px;
+		}
+	}
+	
 }

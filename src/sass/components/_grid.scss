@@ -1,20 +1,48 @@
 .c-grid {
 	@extend %clear;
-	width: 1200px;
+	max-width: 1200px;
 	margin: 0 auto 80px auto;
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		max-width: 600px;
+	}
+	
+	
+	.o-media {
+		display: block;
+	}
 
-	&__item {
-		float: left;
-		padding: 10px;
+	&__item {		
+		padding: 1px 0;
 		cursor: pointer;
 		
-		img {
-			display: block;
+		&--landscape {
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+				float: left;
+				width: grid(600);
+			}
 		}
 		
-		&:hover {
-			img {
-			box-shadow: rgba(black, .3) 0 0 50px 0;
+		&--portrait {
+			float: left;
+			width: grid(300);
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				width: 50%;
+				
+				& + .c-grid__item--portrait {
+					padding-left: 1px;
+				}
+			}
+		}
+		
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+			padding: 10px grid(10);
+			
+			&:hover {
+				img {
+					box-shadow: rgba(black, .3) 0 0 50px 0;
+				}
 			}
 		}
 	}

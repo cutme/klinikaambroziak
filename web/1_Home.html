@@ -24,28 +24,18 @@
 	<div class="c-top">
 		<div class="o-wrap">
 			<a href="1_Home.html" class="c-logo">
-				<img src="img/logos/klinika-ambroziak.svg" alt="Klinika Ambroziak" width="280" height="100">
+				<img src="img/logos/klinika-ambroziak.svg" alt="Klinika Ambroziak" width="280" height="100" class="o-media">
 			</a>
-	
-			<ul class="c-lang">
-				<li>
-					<a href="#" class="is-active">pl</a>
-				</li>
-				
-				<li>
-					<a href="#">en</a>
-				</li>
-			</ul>
 
 		
-		<nav class="c-nav">
-			<ul>
+		<nav class="c-nav" id="nav">
+			<ul class="c-nav__menu">
 				<li>
 					<a href="3_Oferta.html" class="c-nav__link">Oferta</a>
 				</li>
 				
 				<li>
-					<a href="7_Cennik.html" class="c-nav__link">Cennik</a>
+					<a href="7_Cennik.html" class="c-nav__link is-active">Cennik</a>
 				</li>
 				
 				<li>
@@ -72,8 +62,20 @@
 					<a href="23_Zapisy.html" class="o-btn o-btn--gray o-btn--border"><i class="icon-pencil"></i> Zapisy</a>
 				</li>
 			</ul>
+			
+			<ul class="c-lang">
+				<li>
+					<a href="#" class="is-active">pl</a>
+				</li>
+				
+				<li>
+					<a href="#">en</a>
+				</li>
+			</ul>
 		</nav>
 
+		
+			<i class="icon-hamburger c-top__trigger" id="navTrigger"></i>
 		</div>
 	</div>
 
@@ -81,7 +83,7 @@
 
 	<div id="homeSlider">
 		<div class="owl-carousel owl-carousel--header is-loading">
-			<div class="c-header owl-lazy" data-src="img/top/home-1.jpg">
+			<div class="c-header c-header--home owl-lazy" data-src="img/top/home-1.jpg">
 				<div class="o-wrap o-wrap--fullheight">
 					<div class="o-lead">
 						<h3 class="o-lead__big">tutaj zaczyna się piękno</h3>
@@ -123,7 +125,7 @@
 				<img src="img/offer/dietetyka.jpg" alt="" width="505" height="340" class="o-media">
 			</a>
 			
-			<a href="1_Home.html" class="o-link">zobacz całą ofertę</a>
+			<a href="3_Oferta.html" class="o-link">zobacz całą ofertę</a>
 		</aside>
 		
 		<aside class="o-2cols__col o-2cols__col--right">
@@ -148,8 +150,8 @@
 	</div>
 
 	
-	<div class="c-longbox o-layout">
-		<ul class="o-wrap">
+	<div class="c-longbox o-layout" id="longbox">
+		<ul class="o-wrap owl-carousel">
 			<li>
 				<section class="c-longbox__item">
 					<div class="o-lead">
@@ -202,7 +204,7 @@
 
 	
 	<div class="c-contactbar lazy" data-src="img/top/contact.jpg">
-		<div class="o-wrap o-wrap--fullheight anim">
+		<div class="o-wrap o-wrap--fullheight">
 		
 			<div class="c-contactbar__content">
 				<address>

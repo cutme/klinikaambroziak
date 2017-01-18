@@ -24,28 +24,18 @@
 	<div class="c-top">
 		<div class="o-wrap">
 			<a href="1_Home.html" class="c-logo">
-				<img src="img/logos/klinika-ambroziak.svg" alt="Klinika Ambroziak" width="280" height="100">
+				<img src="img/logos/klinika-ambroziak.svg" alt="Klinika Ambroziak" width="280" height="100" class="o-media">
 			</a>
-	
-			<ul class="c-lang">
-				<li>
-					<a href="#" class="is-active">pl</a>
-				</li>
-				
-				<li>
-					<a href="#">en</a>
-				</li>
-			</ul>
 
 		
-		<nav class="c-nav">
-			<ul>
+		<nav class="c-nav" id="nav">
+			<ul class="c-nav__menu">
 				<li>
 					<a href="3_Oferta.html" class="c-nav__link">Oferta</a>
 				</li>
 				
 				<li>
-					<a href="7_Cennik.html" class="c-nav__link">Cennik</a>
+					<a href="7_Cennik.html" class="c-nav__link is-active">Cennik</a>
 				</li>
 				
 				<li>
@@ -72,8 +62,20 @@
 					<a href="23_Zapisy.html" class="o-btn o-btn--gray o-btn--border"><i class="icon-pencil"></i> Zapisy</a>
 				</li>
 			</ul>
+			
+			<ul class="c-lang">
+				<li>
+					<a href="#" class="is-active">pl</a>
+				</li>
+				
+				<li>
+					<a href="#">en</a>
+				</li>
+			</ul>
 		</nav>
 
+		
+			<i class="icon-hamburger c-top__trigger" id="navTrigger"></i>
 		</div>
 	</div>
 

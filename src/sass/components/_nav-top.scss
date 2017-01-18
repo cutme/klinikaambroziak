@@ -1,22 +1,14 @@
 .c-nav {
 	@extend %abs;
-	top: 130px;
-	right: 10px;
+	width: 100%;
 	
-	li {
-		display: inline-block;
-		padding: 0 35px;
-		
-		&:last-child {
-			padding-right: 0;
-		}
-	}
-	
-	a {
-		font: {
-			family: $serif;
-			weight: $bold;
-		}
+	&__menu {
+		a {
+			font: {
+				family: $serif;
+				weight: $bold;
+			}
+		}		
 	}
 	
 	&__link {
@@ -35,22 +27,89 @@
 			opacity: 0;
 		}		
 		
-		&:hover,
 		&.is-active {
-			&:after {
-				transform: rotate(180deg);
-				height: 40px;
-				opacity: 1;
+			color: $c-gray--darker;			
+		}
+	}
+
+	.o-btn {
+		text-transform: none;
+		letter-spacing: normal;
+		font-size: em(14);
+	}
+	
+	@media screen and ( min-width: $tablet + 1 + px ) {
+		top: 130px;
+		right: 10px;
+
+		&__menu {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-left: grid(95);			
+		}
+		
+		&__link {
+			&:hover {
+				&:after {
+					transform: rotate(180deg);
+					height: 40px;
+					opacity: 1;
+				}
 			}
 		}
 	}
 	
-	.o-btn {
-		text-transform: none;
-		letter-spacing: normal;
-		font: {;
-			size: em(14);
+	@media screen and ( max-width: $tablet + px ) {
+		@extend %anim;
+		visibility: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: fixed;
+		left: 100%; top: 0; right: auto; z-index: 20;
+		height: 100%;
+		background-color: $c-gray--brightest;
+		overflow: scroll;
+		-webkit-overflow-scrolling: touch;
+		opacity: 0;
+		padding-top: 160px;
+		
+		&.is-active {
+			visibility: visible;
+			left: 0;
+			opacity: 1;
 		}
 		
+		&__menu {
+			margin-bottom: 60px;
+			text-align: center;
+			
+			li {
+				&:last-child {
+					padding-top: 20px;
+				}
+			}
+		}
+		
+		&__link {
+			padding: 10px 0;
+			
+			
+		}
+		
+		&__link,
+		.o-btn {
+			white-space: nowrap;
+			font-size: em(20);
+		}
+		
+		.o-btn {
+			height: auto;
+			padding: {
+				top: 5px;
+				bottom: 5px;
+			}
+		}
 	}
 }

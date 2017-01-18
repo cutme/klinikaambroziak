@@ -8,9 +8,12 @@
 		amb.Layout.lazy();
 		amb.Layout.showOnScroll();
 		amb.Layout.svgInline();
+		amb.Nav.init();
 		amb.Slider.init();
 		amb.Helper.isInView();
 
+		amb.Helper.isInView();
+		amb.Helper.exist('#longbox') && amb.Longbox.init();
 		amb.Helper.exist('#map') && amb.googleMap.init();
 		amb.Helper.exist('#team') && amb.Team.init();		
 

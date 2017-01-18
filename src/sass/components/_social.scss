@@ -28,4 +28,8 @@
 		top: 3px;		
 		font-size: 36px;
 	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		margin-bottom: 45px;
+	}
 }

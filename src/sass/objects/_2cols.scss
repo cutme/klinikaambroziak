@@ -1,20 +1,39 @@
+$cols__col:	600;
+
 .o-2cols {
 	@extend %clear;
 	@extend %wrap;
 	z-index: 5;
 	
+	.o-link {
+		@extend %abs;
+		bottom: 80px;
+		
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+			left: 10px;
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			right: 0;
+			bottom: 40px;
+		}
+	}
+
 	.o-media {
 		@extend %anim;
-		float: right;
+		display: block;
 	}
 	
 	&__col {
-		float: left;
-		width: 600px;
-		padding: 0 10px;
-		
-		&--right {
-			padding-top: 170px;
+
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+			float: left;
+			width: grid($cols__col);
+			padding: 0 grid($padding);
+			
+			&--right {
+				padding-top: 170px;
+			}
 		}
 	}
 	
@@ -31,12 +50,12 @@
 		visibility: hidden;
 		
 		.o-2cols__col--left & {
-			right: calc(-100% - 20px);
+			right: calc(-100% - 17px);
 			transform:  translateX(-50%);
 		}
 		
 		.o-2cols__col--right & {
-			left: calc(-100% + 55px);
+			left: calc(-100% + 52px);
 			transform: translateX(50%);
 		}
 		
@@ -65,6 +84,7 @@
 		display: block;
 		position: relative;
 		margin-bottom: 80px;
+		padding-left: grid(75, 600);
 		
 		&:before {
 			@extend %icomoon;
@@ -86,6 +106,17 @@
 				}
 			}
 		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			max-width: $cols__col + px;
+			margin: {
+				left: auto;
+				right: auto;
+				bottom: 60px;
+			}
+			padding-left: 95px;
+//			padding: 0 grid($padding);
+		}
 	}
 	
 	&__photo {
@@ -97,7 +128,15 @@
 		@extend %anim;
 		left: 0;
 		z-index: 10;
-		width: 280px;
+		width: grid(280, $cols__col - 2 * $padding);
+		
+		@media screen and ( max-width: $grid-base-width + px ) {
+			padding-left: 10px;
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			padding-left: 20px;
+		}
 	}
 	
 	&__title {
@@ -110,6 +149,11 @@
 			size: em(22);
 			weight: $black;
 		}
+		
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $tablet + px ), 
+						  ( max-width: $smartphone + px ) {
+			font-size: em(14);
+		}
 	}
 	
 	&__desc {
@@ -118,5 +162,14 @@
 			weight: $bold;
 		}
 		color: $c-gray--darker;
+		
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $tablet + px ),
+						  ( max-width: $smartphone + px ) {
+			font-size: em(14);
+		}
+	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		padding-bottom: 60px;
 	}
 }

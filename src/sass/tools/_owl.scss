@@ -3,7 +3,7 @@
 		@extend %anim-slow;
 		display: block;
 		overflow: hidden;	
-		height: 615px;
+		//height: 615px;
 		margin-bottom: 80px;
 		
 		&:before {
@@ -35,9 +35,9 @@
 		}
 		
 		.owl-nav {
-			left: 50%;
+			left: 20px;
 			width: 115px;
-			transform: translateX(-590px);
+			
 		
 			.owl-prev,
 			.owl-next {
@@ -74,12 +74,21 @@
 			.owl-next {
 				margin-right: 0;
 			}
+			
+			@media screen and ( min-width: $grid-base-width + 1 + px ) {
+				left: 50%;
+				transform: translateX(-590px);
+			}
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				display: none;
+			}
 		}
 		
 		.owl-dots {
-			right: 50%;
+			right: 20px;
 			height: 20px;
-			transform: translateX(590px);
+			
 			
 			.owl-dot {
 				display: inline-block;
@@ -100,6 +109,16 @@
 				&:hover {
 					opacity: 1;
 				}
+			}
+			
+			@media screen and ( min-width: $grid-base-width + 1 + px ) {
+				right: 50%;
+				transform: translateX(590px);
+			}
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				right: auto;
+				left: 20px;
 			}
 		}
 	}

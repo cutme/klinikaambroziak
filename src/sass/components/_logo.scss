@@ -3,4 +3,9 @@
 	top: 17px;
 	display: block;
 	width: 280px;
+	
+	@media screen and ( max-width: $tablet + px ) {
+		width: 170px;
+		top: 24px;
+	}
 }

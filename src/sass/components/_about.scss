@@ -39,11 +39,25 @@
 		margin-bottom: 40px;
 		padding: 120px 0;
 		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			padding: 20px;
+		}
+		
 		&:before {
 			@extend %abs-after;
 			top: 0;
 			width: calc( ((100% - 1180px)/2) + 730px );
 			height: 100%;
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				height:85%;
+			}
+		}
+		
+		br {
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				display: none;
+			}
 		}
 		
 		.o-biglead {
@@ -55,13 +69,15 @@
 		}
 		
 		&:nth-child(odd) {
-			.c-about__image {
-				float: right;
-			}
-			
-			.c-about__info {
-				float: left;
-				padding-left: 75px;
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+				.c-about__image {
+					float: right;
+				}
+				
+				.c-about__info {
+					float: left;
+					padding-left: grid(75);
+				}
 			}
 			
 			&:before {
@@ -75,14 +91,16 @@
 		}
 		
 		&:nth-child(even) {
-			.c-about__image {
-				float: left;
-			}
-
-			.c-about__info {
-				float: right;
-				width: 600px;
-				padding-right: 75px;
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+				.c-about__image {
+					float: left;
+				}
+	
+				.c-about__info {
+					float: right;
+					width: grid(600);
+					padding-right: grid(75);
+				}
 			}
 
 			&:before {
@@ -124,13 +142,20 @@
 			}
 		}
 	}
-	
-	&__image {
-		box-shadow: rgba(black, .2) 0 0 70px;
+
+	&__image {		
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+			width: grid(505);
+			box-shadow: rgba(black, .2) 0 0 70px;
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			margin-bottom: 30px;
+		}
 		
 		.o-media {
 			display: block;
-		}
+		}		
 	}
 	
 	&__desc {
@@ -139,10 +164,14 @@
 			size: em(16);
 			weight: $medium;
 		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			font-size: em(14);
+		}
 	}
 	
 	&__info {
-		width: 555px;
+		width: grid(555);		
 	}
 	
 	&__links {
@@ -224,6 +253,10 @@
 		font: {
 			size: em(34);
 			weight: $bold;
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			font-size: em(20);
 		}
 	}
 }

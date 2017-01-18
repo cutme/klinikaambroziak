@@ -1,14 +1,13 @@
 .c-lang {
 	@extend %abs;
-	right: 10px;
-	top: 60px;
+	right: 0;
+	top: -70px;
 
 	li {
-		float: left;
+		display: inline-block;
 		padding-right: 15px;
 		text-transform: uppercase;
 		font: {
-			size: em(12);
 			weight: $black;
 		}
 		
@@ -19,5 +18,23 @@
 	
 	.is-active {
 		color: $c-gray;
+	}
+	
+	@media screen and ( min-width: $tablet + 1 + px ) {
+		right: 0;
+		top: -70px;
+		
+		li {
+			float: left;
+			font-size: em(12);
+		}
+	}
+	
+	@media screen and ( max-width: $tablet + px ) {
+		position: relative;
+		top: auto;
+		width: 100%;
+		margin-bottom: 60px;
+		text-align: center;
 	}
 }

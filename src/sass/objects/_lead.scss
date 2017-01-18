@@ -20,14 +20,26 @@
 		.c-about__sections & {
 			background-color: $c-gray--darker;
 		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			height: 30px;			
+		}
 	}
 	
 	&:after {
 		bottom: -60px;
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			bottom: -40px;
+		}
 	}
 	
 	&:before {
 		top: -60px;
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			top: -50px;
+		}
 	}
 
 	&__big {
@@ -35,6 +47,7 @@
 		text-transform: uppercase;
 		font-weight: $black;
 		line-height: 1.2;
+/*
 		
 		.c-header--aplaBlack & {
 			color: $c-gray--brightest;
@@ -43,6 +56,7 @@
 		.c-header--aplaGray & {
 			color: $c-gray--brightest;
 		}
+*/
 	}
 
 	&__medium {
@@ -53,6 +67,10 @@
 		
 		.c-header & {
 			font-size: em(22);
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				font-size: em(14);
+			}
 		}
 		
 		.c-header--apla & {
@@ -91,8 +109,25 @@
 		
 		&__big {
 			letter-spacing: 6px;
-			font-size: em(48);
+			font-size: em(48);	
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {				
+				font-size: em(26);
+			}		
 		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			width: 100%;
+			
+			.owl-carousel--header & {
+				top: 80px;
+				transform: translateY(0);
+			}
+		}
+	}
+	
+	.c-header--apla & {
+		width: 50%;
 	}
 	
 	&--full {

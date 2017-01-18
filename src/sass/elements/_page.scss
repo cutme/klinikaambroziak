@@ -3,6 +3,10 @@ body {
 		color: white;
 		repeat: no-repeat;
 	}
+	
+	@media screen and ( max-width: $tablet + px ) {
+		padding-top: 100px;
+	}
 }
 
 body,

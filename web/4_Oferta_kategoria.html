@@ -24,28 +24,18 @@
 	<div class="c-top">
 		<div class="o-wrap">
 			<a href="1_Home.html" class="c-logo">
-				<img src="img/logos/klinika-ambroziak.svg" alt="Klinika Ambroziak" width="280" height="100">
+				<img src="img/logos/klinika-ambroziak.svg" alt="Klinika Ambroziak" width="280" height="100" class="o-media">
 			</a>
-	
-			<ul class="c-lang">
-				<li>
-					<a href="#" class="is-active">pl</a>
-				</li>
-				
-				<li>
-					<a href="#">en</a>
-				</li>
-			</ul>
 
 		
-		<nav class="c-nav">
-			<ul>
+		<nav class="c-nav" id="nav">
+			<ul class="c-nav__menu">
 				<li>
 					<a href="3_Oferta.html" class="c-nav__link">Oferta</a>
 				</li>
 				
 				<li>
-					<a href="7_Cennik.html" class="c-nav__link">Cennik</a>
+					<a href="7_Cennik.html" class="c-nav__link is-active">Cennik</a>
 				</li>
 				
 				<li>
@@ -72,8 +62,20 @@
 					<a href="23_Zapisy.html" class="o-btn o-btn--gray o-btn--border"><i class="icon-pencil"></i> Zapisy</a>
 				</li>
 			</ul>
+			
+			<ul class="c-lang">
+				<li>
+					<a href="#" class="is-active">pl</a>
+				</li>
+				
+				<li>
+					<a href="#">en</a>
+				</li>
+			</ul>
 		</nav>
 
+		
+			<i class="icon-hamburger c-top__trigger" id="navTrigger"></i>
 		</div>
 	</div>
 
@@ -98,64 +100,84 @@
 		<ul>
 			<li class="anim">
 				<a href="6_Oferta_detal.html" class="c-list__link">
-					<span class="c-list__name">obagi medical</span>
-					<span class="c-list__desc">System pielęgnacji dopasowany do potrzeb skóry</span>
+					<span class="c-list__link--center">
+						<span class="c-list__name">obagi medical</span>
+						<span class="c-list__desc">System pielęgnacji dopasowany do potrzeb skóry</span>
+					</span>
 				</a>
 			</li>
 			
 			<li class="anim">
 				<a href="6_Oferta_detal.html" class="c-list__link">
-					<span class="c-list__name">skinceuticals</span>
-					<span class="c-list__desc">zabiegi profesjonalne</span>
+					<span class="c-list__link--center">
+						<span class="c-list__name">skinceuticals</span>
+						<span class="c-list__desc">zabiegi profesjonalne</span>
+					</span>
 				</a>
 			</li>
 			
 			<li class="anim">
 				<a href="6_Oferta_detal.html" class="c-list__link">
-					<span class="c-list__name">venus legacy</span>
-					<span class="c-list__desc">najskuteczniejsza redukcja cellulitu</span>
+					<span class="c-list__link--center">
+						<span class="c-list__name">venus legacy</span>
+						<span class="c-list__desc">najskuteczniejsza redukcja cellulitu</span>
+					</span>
 				</a>
 			</li>
 			
 			<li class="anim">
 				<a href="6_Oferta_detal.html" class="c-list__link">
-					<span class="c-list__name">pelleve</span>
+					<span class="c-list__link--center">
+						<span class="c-list__name">pelleve</span>
+					</span>
 				</a>
 			</li>
 			
 			<li class="anim">
 				<a href="6_Oferta_detal.html" class="c-list__link">
-					<span class="c-list__name">selvert thermal dermatologique</span>
+					<span class="c-list__link--center">
+						<span class="c-list__name">selvert thermal dermatologique</span>
+					</span>
 				</a>
 			</li>
 			
 			<li class="anim">
 				<a href="6_Oferta_detal.html" class="c-list__link">
-					<span class="c-list__name">intraceuticals</span>
+					<span class="c-list__link--center">
+						<span class="c-list__name">intraceuticals</span>
+					</span>
 				</a>
 			</li>
 			
 			<li class="anim">
 				<a href="6_Oferta_detal.html" class="c-list__link">
-					<span class="c-list__name">intraceuticals: rejuvenate + boosters</span>
+					<span class="c-list__link--center">
+						<span class="c-list__name">intraceuticals: rejuvenate + boosters</span>
+					</span>
 				</a>
 			</li>
 			
 			<li class="anim">
 				<a href="6_Oferta_detal.html" class="c-list__link">
-					<span class="c-list__name">yellow peel</span>
+					<span class="c-list__link--center">
+						<span class="c-list__name">yellow peel</span>
+					</span>
 				</a>
 			</li>
 			
 			<li class="anim">
 				<a href="6_Oferta_detal.html" class="c-list__link">
-					<span class="c-list__name">mikrodermabrazja</span>
+					<span class="c-list__link--center">
+						<span class="c-list__name">mikrodermabrazja</span>
+					</span>
 				</a>
 			</li>
 			
 			<li class="anim">
 				<a href="6_Oferta_detal.html" class="c-list__link">
-					<span class="c-list__name">dermapen</span>
+					<span class="c-list__link--center">
+						<span class="c-list__name">dermapen</span>
+					</span>
 				</a>
 			</li>
 		</ul>
@@ -164,7 +186,7 @@
 
 	
 	<div class="c-contactbar lazy" data-src="img/top/contact.jpg">
-		<div class="o-wrap o-wrap--fullheight anim">
+		<div class="o-wrap o-wrap--fullheight">
 		
 			<div class="c-contactbar__content">
 				<address>

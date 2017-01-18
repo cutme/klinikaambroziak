@@ -3,12 +3,21 @@
 	z-index: 1;
 	height: 615px;
 	background: {
-		position: center;
-		size: cover;
+		position: center bottom;
+		repeat: no-repeat;
+		size: 1920px auto;
+	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		height: 475px !important;
+		background: {
+			size: cover;
+		}
 	}
 	
 	&--low {
 		height: 415px;
+		background-position: center top;
 	}
 	
 	&--apla {
@@ -17,6 +26,10 @@
 			left: 0; top: 0;
 			width: 50%;
 			height: 100%;
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				width: 100%;
+			}
 		}
 	}
 

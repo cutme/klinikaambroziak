@@ -24,28 +24,18 @@
 	<div class="c-top">
 		<div class="o-wrap">
 			<a href="1_Home.html" class="c-logo">
-				<img src="img/logos/klinika-ambroziak.svg" alt="Klinika Ambroziak" width="280" height="100">
+				<img src="img/logos/klinika-ambroziak.svg" alt="Klinika Ambroziak" width="280" height="100" class="o-media">
 			</a>
-	
-			<ul class="c-lang">
-				<li>
-					<a href="#" class="is-active">pl</a>
-				</li>
-				
-				<li>
-					<a href="#">en</a>
-				</li>
-			</ul>
 
 		
-		<nav class="c-nav">
-			<ul>
+		<nav class="c-nav" id="nav">
+			<ul class="c-nav__menu">
 				<li>
 					<a href="3_Oferta.html" class="c-nav__link">Oferta</a>
 				</li>
 				
 				<li>
-					<a href="7_Cennik.html" class="c-nav__link">Cennik</a>
+					<a href="7_Cennik.html" class="c-nav__link is-active">Cennik</a>
 				</li>
 				
 				<li>
@@ -72,8 +62,20 @@
 					<a href="23_Zapisy.html" class="o-btn o-btn--gray o-btn--border"><i class="icon-pencil"></i> Zapisy</a>
 				</li>
 			</ul>
+			
+			<ul class="c-lang">
+				<li>
+					<a href="#" class="is-active">pl</a>
+				</li>
+				
+				<li>
+					<a href="#">en</a>
+				</li>
+			</ul>
 		</nav>
 
+		
+			<i class="icon-hamburger c-top__trigger" id="navTrigger"></i>
 		</div>
 	</div>
 
@@ -89,7 +91,11 @@
 	<ul class="c-about__offer">
 		<li class="c-about__row blue--brightest">
 			<div class="o-wrap">
-			
+
+				<div class="c-about__image">
+					<img src="img/about/onas-1.jpg" alt="" width="505" height="340" class="o-media">
+				</div>
+				
 				<span class="c-about__info">
 					<span class="c-about__title serif">
 Wyjątkowe miejsce, które na warszawskiej mapie urodowej istnieje już <span class="color-blue">od 16 lat</span>.
@@ -99,10 +105,6 @@ Wyjątkowe miejsce, które na warszawskiej mapie urodowej istnieje już <span cl
 Stworzona dla osób ceniących komfort, profesjonalizm, a przede wszystkim poszukujących zabiegów z zakresu medycyny estetycznej na najwyższym, światowym poziomie. Każdy, kto odwiedzi Klinikę, poczuje magię tego miejsca – tutaj zaczyna się piękno.
 					</span>
 				</span>
-
-				<div class="c-about__image">
-					<img src="img/about/onas-1.jpg" alt="" width="505" height="340" class="o-media">
-				</div>
 			</div>
 			
 			<cite class="o-biglead serif color-blue">16 lat</cite>
@@ -110,7 +112,11 @@ Stworzona dla osób ceniących komfort, profesjonalizm, a przede wszystkim poszu
 		
 		<li class="c-about__row orange--brighter">
 			<div class="o-wrap">
-			
+
+				<div class="c-about__image">
+					<img src="img/about/onas-2.jpg" alt="" width="505" height="340" class="o-media">
+				</div>
+				
 				<span class="c-about__info">
 					<span class="c-about__title serif">
 Zespół Kliniki dokładnie śledzi światowe trendy w medycynie estetycznej i wybiera zabiegi, które są <span class="color-orange">najskuteczniejsze <br>i najbardziej bezpieczne</span>.
@@ -120,39 +126,39 @@ Zespół Kliniki dokładnie śledzi światowe trendy w medycynie estetycznej i w
 Klinika Ambroziak oferuje pełen zakres wzajemnie uzupełniających się zabiegów z zakresu dermatologii estetycznej i klinicznej, chirurgii plastycznej i naczyniowej, flebologii, ginekologii estetycznej, laryngologii oraz fizjoterapii i kosmetologii. 
 					</span>
 				</span>
-
-				<div class="c-about__image">
-					<img src="img/about/onas-2.jpg" alt="" width="505" height="340" class="o-media">
-				</div>
 			</div>
 			
 			<cite class="o-biglead serif color-orange">najskuteczniejsze</cite>
 		</li>
 		
 		<li class="c-about__row gray--brightest">
-			<div class="o-wrap">
-				
-					<span class="c-about__info">
-						<span class="c-about__title serif">
-	W Klinice można nie tylko <span class="color-beige">zrelaksować</span> się podczas masażu czy zabiegu kosmetycznego,
-						</span>
-	
-						<span class="c-about__desc">
-	ale również poprawić mankamenty sylwetki, walczyć z upływającym czasem oraz poprawić niedoskonałości natury. A to wszystko pod opieką doświadczonego i wysoko wykfalifikowanego personelu Zespołu.
-						</span>
-					</span>
-	
-					<div class="c-about__image">
-						<img src="img/about/onas-3.jpg" alt="" width="505" height="340" class="o-media">
-					</div>
+			<div class="o-wrap">				
+
+				<div class="c-about__image">
+					<img src="img/about/onas-3.jpg" alt="" width="505" height="340" class="o-media">
 				</div>
+				
+				<span class="c-about__info">
+					<span class="c-about__title serif">
+W Klinice można nie tylko <span class="color-beige">zrelaksować</span> się podczas masażu czy zabiegu kosmetycznego,
+					</span>
+
+					<span class="c-about__desc">
+ale również poprawić mankamenty sylwetki, walczyć z upływającym czasem oraz poprawić niedoskonałości natury. A to wszystko pod opieką doświadczonego i wysoko wykfalifikowanego personelu Zespołu.
+					</span>
+				</span>
+			</div>
 			
 			<cite class="o-biglead serif color-beige">relaks</cite>
 		</li>
 		
 		<li class="c-about__row violet">
 			<div class="o-wrap">
-			
+
+				<div class="c-about__image">
+					<img src="img/about/onas-4.jpg" alt="" width="505" height="340" class="o-media">
+				</div>
+				
 				<span class="c-about__info">
 					<span class="c-about__title serif">
 Jako jedna z nielicznych Klinik<br> w Polsce oferujemy <span class="color-violet--darker">kompleksowe zabiegi</span> dla kobiet w ciąży oraz młodych mam.
@@ -162,18 +168,18 @@ Jako jedna z nielicznych Klinik<br> w Polsce oferujemy <span class="color-violet
 Prowadzenie ciąży, program pielęgnacyjny, porady kosmetyczne i dietetyczne. Rytuały te odbywają się przy specjalnie skomponowanej muzyce, pozwalającej matce nawiązać kontakt z dzieckiem.
 					</span>
 				</span>
-
-				<div class="c-about__image">
-					<img src="img/about/onas-4.jpg" alt="" width="505" height="340" class="o-media">
-				</div>
 			</div>
 			
 			<cite class="o-biglead serif color-violet--darker">kompleksowe</cite>
 		</li>
 		
 		<li class="c-about__row pink">
-			<div class="o-wrap">
-			
+			<div class="o-wrap">				
+
+				<div class="c-about__image">
+					<img src="img/about/onas-5.jpg" alt="" width="505" height="340" class="o-media">
+				</div>
+				
 				<span class="c-about__info">
 					<span class="c-about__title serif">
 Klinika Ambroziak, to <span class="color-pink--darker">luksusowe i przestronne wnętrze</span>
@@ -183,10 +189,6 @@ Klinika Ambroziak, to <span class="color-pink--darker">luksusowe i przestronne w
 składające się z 16 gabinetów lekarskich, sali operacyjnej oraz sali VIP Room – przyjaznej strefy pacjenta, stworzonej specjalnie dla Państwa, w celu podniesienia komfortu.
 					</span>
 				</span>
-
-				<div class="c-about__image">
-					<img src="img/about/onas-5.jpg" alt="" width="505" height="340" class="o-media">
-				</div>
 			</div>
 			
 			<cite class="o-biglead serif color-pink--darker">luksusowe</cite>
@@ -280,7 +282,7 @@ składające się z 16 gabinetów lekarskich, sali operacyjnej oraz sali VIP Roo
 
 	
 	<div class="c-contactbar lazy" data-src="img/top/contact.jpg">
-		<div class="o-wrap o-wrap--fullheight anim">
+		<div class="o-wrap o-wrap--fullheight">
 		
 			<div class="c-contactbar__content">
 				<address>

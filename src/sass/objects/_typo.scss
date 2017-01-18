@@ -15,18 +15,6 @@
 	img {
 		max-width: 100%;
 	}
-
-	p, li {
-		font: {
-			weight: $medium;
-			size: em(16);
-		}
-		line-height: 1.6;
-	}
-	
-	p {
-		margin-bottom: 1.5em;
-	}
 	
 	ol {
 		counter-reset: list-counter;
@@ -40,6 +28,11 @@
 				
 				counter-increment: list-counter;
 				content: counter(list-counter) ". ";
+				
+				@media screen and ( max-width: $tablet_portrait + px ) {
+					font-size: em(20);
+				}
+				
 			}
 		}
 		
@@ -49,52 +42,17 @@
 
 	}
 
-	ul {
-		list-style: disc;
-		margin-bottom: 3em;
-		padding-left: 20px;
+	p, li {
+		font-weight: $medium;
+		line-height: 1.6;
 		
-		& + h4 {
-			padding-top: 30px;
-		}
-		
-		li {
-			position: relative;
-			
-			&:before {
-				/*
-position: absolute;
-				top: 12px;
-				left: -15px;
-				display: block;
-				width: 4px; height: 4px;
-				background-color: $c-black;
-				border-radius: 50%;
-				content: ' ';
-*/
-				
-				.bg--blue--brightest & {
-					background-color: $c-blue;
-				}
-				
-				.bg-gray--brightest & {
-					background-color: $c-gray--darker;
-				}
-			}
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+			font-size: em(16);
 		}
 	}
 	
-	&--cols {
-		padding: {
-			top: 120px;
-			bottom: 120px;
-		}
-
-		.col {
-			float: left;
-			width: 50%;
-			padding-left: 75px;
-		}
+	p {
+		margin-bottom: 1.5em;
 	}
 	
 	h2 {
@@ -102,6 +60,10 @@ position: absolute;
 		font: {
 			size: em(34, 16);
 			family: $serif;
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			font-size: em(20);
 		}
 	}
 	
@@ -138,6 +100,34 @@ position: absolute;
 		}
 	}
 	
+	ul {
+		list-style: disc;
+		margin-bottom: 3em;
+		padding-left: 20px;
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			margin-bottom: 2em;
+		}
+		
+		& + h4 {
+			padding-top: 30px;
+		}
+		
+		li {
+			position: relative;
+			
+			&:before {			
+				.bg--blue--brightest & {
+					background-color: $c-blue;
+				}
+				
+				.bg-gray--brightest & {
+					background-color: $c-gray--darker;
+				}
+			}
+		}
+	}
+	
 	&--14px {
 		p, li {
 			font-size: em(14);
@@ -145,6 +135,32 @@ position: absolute;
 		
 		h4 {
 			font-size: em(22, 14);
+		}
+	}
+	
+	&--cols {
+		padding: {
+			top: 120px;
+			bottom: 120px;
+		}
+		
+		@media screen and ( max-width: $tablet + px ) {
+			padding: {
+				top: 60px;
+				bottom: 60px;
+			}
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			padding: 40px 20px;
+		}
+		
+		.col {
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+				float: left;
+				width: 50%;
+				padding-left: grid(75);
+			}
 		}
 	}
 	

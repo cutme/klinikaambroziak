@@ -27,7 +27,7 @@
 		
 		$('.c-gallery-fullscreen__info', g).hide();
 		$(g).addClass('is-visible');
-	}
+	};
 	
 	Gallery.prototype.carousel = function(index) {
 

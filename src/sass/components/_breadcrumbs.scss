@@ -1,9 +1,17 @@
 .c-breadcrumbs {
-	padding: 35px 0;
+	padding: {
+		top: 35px;
+		bottom: 35px;
+	}
 	letter-spacing: 2px;
 	font: {
 		size: em(12);
 		weight: $medium;
+	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		letter-spacing: 1px;
+		font-size: em(10);
 	}
 	
 	.c-header--aplaGray & {
@@ -19,6 +27,13 @@
 		z-index: 5 !important;
 		width: $grid-base-width+px;
 		top: 0;
+		
+		
+		
+		@media screen and ( max-width: $grid-base-width + px ) {
+			left: 20px;
+			transform: none;
+		}
 	}
 
 	&__item {		
@@ -44,5 +59,13 @@
 	
 	&.border {
 		border-bottom: 1px solid rgba($c-gray--darker, .5);
+	}
+	
+	@media screen and ( max-width: $grid-base-width + px ) {
+		padding: {
+			//left: 20px;
+			top: 20px;
+			bottom: 20px;
+		}
 	}
 }

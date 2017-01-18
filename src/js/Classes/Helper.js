@@ -5,7 +5,8 @@
         return {
             exist: exist,
             goToTarget: goToTarget,
-            isInView: isInView
+            isInView: isInView,
+            isWindowSmallerThan: isWindowSmallerThan
         };
     };
 
@@ -25,12 +26,16 @@
 	function isInView() {
 		var bottomOfWindow = $(window).scrollTop() + $(window).height();
 		
-		$('div.anim, li.anim').each(function() {
+		$('header.anim, div.anim, li.anim').each(function() {
 			if ( $(this).offset().top < bottomOfWindow ) {
 				$(this).addClass('is-visible');
 			}
 		});
 	}
+	
+	function isWindowSmallerThan(resBorder) {
+        return window.innerWidth < parseInt(resBorder, 10);
+    }
 	
 	amb.Helper = new Helper();
 

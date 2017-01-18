@@ -23,11 +23,6 @@
 			animation-timing-function: ease-in-out;
 		}
 	}
-
-	.o-2cols & {
-		@extend %abs;
-		left: 10px; bottom: 80px;
-	}
 	
 	&.top-right {
 		@extend %abs;

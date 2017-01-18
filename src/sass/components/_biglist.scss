@@ -6,21 +6,35 @@
 		margin-bottom: 25px;
 		font-weight: $black;
 		color: $c-gray;
+		
+		@media screen and ( max-width: $tablet + px ) {
+			font-size: em(12);
+		}
 	}
 
 	&__link {
 		display: block;
 		transition-duration: 200ms;
 		position: relative;
-		min-height: 230px;
 		background-color: white;
 		border-bottom: 1px solid rgba($c-gray--darker, .5);
+		
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+			min-height: 230px;
+		}
 
 		.o-wrap {
-			width: 1200px;
 			height: 100%;
 			margin: 0 auto;
-			padding: 25px 90px;
+			padding: 25px grid(90);
+			
+			@media screen and ( min-width: $grid-base-width+px ) {
+				width: 1200px;
+			}
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				padding: 25px 20px;
+			}
 			
 			&:after {
 				@extend %icomoon;
@@ -28,6 +42,11 @@
 				right: 40px;
 				bottom: 45px;
 				content: "\e900";
+				
+				@media screen and ( max-width: $tablet_portrait + px ) {
+					right: 20px;
+					bottom: 20px;
+				}
 			}
 		}
 		
@@ -41,13 +60,21 @@
 		margin-bottom: .8em;
 		font-family: $serif;
 		font-size: em(34);	
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			font-size: em(20);
+		}
+		
 	}
 	
 	&__desc {
 		display: block;
 		margin-bottom: 1em;
-		font-size: em(16);
 		font-weight: $medium;
+		
+		@media screen and ( min-width: $tablet + 1 + px ) {
+			font-size: em(16);
+		}
 	}
 }
 
