@@ -21,7 +21,7 @@
 			background-color: $c-gray--darker;
 		}
 		
-		@media screen and ( max-width: $tablet_portrait + px ) {
+		@media screen and ( max-width: $tablet + px ) {
 			height: 30px;			
 		}
 	}
@@ -29,7 +29,7 @@
 	&:after {
 		bottom: -60px;
 		
-		@media screen and ( max-width: $tablet_portrait + px ) {
+		@media screen and ( max-width: $tablet + px ) {
 			bottom: -40px;
 		}
 	}
@@ -37,7 +37,7 @@
 	&:before {
 		top: -60px;
 		
-		@media screen and ( max-width: $tablet_portrait + px ) {
+		@media screen and ( max-width: $tablet + px ) {
 			top: -50px;
 		}
 	}
@@ -47,16 +47,6 @@
 		text-transform: uppercase;
 		font-weight: $black;
 		line-height: 1.2;
-/*
-		
-		.c-header--aplaBlack & {
-			color: $c-gray--brightest;
-		}
-		
-		.c-header--aplaGray & {
-			color: $c-gray--brightest;
-		}
-*/
 	}
 
 	&__medium {
@@ -92,7 +82,7 @@
 		font: {
 			size: em(16);
 			weight: $medium;
-		}
+		}		
 		
 		a {
 			font-weight: $bold;

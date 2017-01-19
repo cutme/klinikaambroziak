@@ -26,7 +26,7 @@
 	function isInView() {
 		var bottomOfWindow = $(window).scrollTop() + $(window).height();
 		
-		$('header.anim, div.anim, li.anim').each(function() {
+		$('header.anim, div.anim, li.anim, ul.anim').each(function() {
 			if ( $(this).offset().top < bottomOfWindow ) {
 				$(this).addClass('is-visible');
 			}

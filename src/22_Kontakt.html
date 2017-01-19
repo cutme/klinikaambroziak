@@ -5,13 +5,47 @@
 
 	<!--@include('includes/top.html')-->
 
-	<div class="c-header c-header--map" id="map" data-lat="52.1853553" data-lng="21.042153" data-marker="img/icons/marker.svg"></div>
+	<div class="c-header c-header--map">
+		<div class="c-map">
+			<div 
+				id="map" 
+				class="c-map__map" 
+				data-lat="52.1853553" 
+				data-lng="21.042153" 
+				data-marker="img/icons/marker.svg">
+			</div>
+		
+			<div class="c-map__buttons" id="mapButtons">
+				<div class="c-map__btn js-btn is-active"
+					data-lat="52.1853553" 
+					data-lng="21.042153">
+					
+					<i class="icon-marker-2"></i>
+					
+					<span class="title">
+						<strong>Al. gen. w. sikorskiego 13/u1 02-758</strong> / Warszawa
+					</span>
+				</div>
+				
+				<div class="c-map__btn js-btn"
+					data-lat="52.0775919" 
+					data-lng="21.0242202">
+
+					<i class="icon-marker-2"></i>
+					
+					<span class="title">
+						<strong>ul. Młynarska 2a 05-500</strong> / Piaseczno
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
-	<div class="o-wap">
+	<div class="o-wrap">
 		<div class="c-direction anim">
 			<div class="c-direction__logo text-center">
-				<img src="img/logos/klinika-ambroziak.svg" alt="Klinika Ambroziak" width="280">
+				<img src="img/logos/klinika-ambroziak.svg" alt="Klinika Ambroziak" width="280" class="o-media">
 			</div>
 			
 			<h4 class="c-direction__lead serif text-center">Dojazd do kliniki w Warszawie</h4>
@@ -57,7 +91,7 @@
 		
 		<div class="c-direction anim">
 			<div class="c-direction__logo text-center">
-				<img src="img/logos/szpital-ambroziak.svg" alt="Klinika Ambroziak" width="280">
+				<img src="img/logos/szpital-ambroziak.svg" alt="Klinika Ambroziak" width="280" class="o-media">
 			</div>
 			
 			<h4 class="c-direction__lead serif text-center">Dojazd do szpitala w Piasecznie</h4>
@@ -156,10 +190,10 @@
 			<div class="o-biglead serif">Piaseczno</div>	
 		</div>
 	</div>
-	
+
 	
 	<ul class="c-sections anim">
-		<li>
+		<li class="c-sections__item">
 			<div class="o-lead">
 				<h3 class="o-lead__big fs-28px">biuro prasowe</h3>
 				<!--@include('includes/biuro-prasowe.html')-->
@@ -168,7 +202,7 @@
 			<img src="img/contact/biuro-prasowe.jpg" alt="biuro prasowe" width="950" height="575" class="o-media">
 		</li>
 		
-		<li>
+		<li class="c-sections__item">
 			<div class="o-lead">
 				<h3 class="o-lead__big fs-28px">biuro prawne</h3>
 				<!--@include('includes/biuro-prawne.html')-->

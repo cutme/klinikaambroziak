@@ -1,7 +1,6 @@
 .c-direction {
 	@extend %rel;
-	
-	
+
 	.dot {
 		display: block;
 		background-color: white;
@@ -43,18 +42,30 @@
 	}	
 
 	&__item {
-		width: 880px;
+		width: grid(880);
 		margin: 0 auto;
+		
+		@media screen and ( max-width: $tablet + px ) {
+			width: 100%;
+		}
+		
 	}
 	
 	&__logo {
 		width: 280px;
 		margin: 0 auto 35px auto;
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			width: 170px;
+		}
 	}
 
 	&__lead {
 		margin-bottom: 110px;
-		font-size: em(18);
+		
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+			font-size: em(18);
+		}
 	}
 	
 	&__line {
@@ -64,6 +75,13 @@
 		height: 1px;
 		background-color: $c-gray--brightest;
 		margin-bottom: 180px;
+		
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $tablet + px ) {
+			padding: {
+				left: 100px;
+				right: 100px;
+			}
+		}
 		
 		&--warszawa {
 			justify-content: space-between;
@@ -99,6 +117,10 @@
 			
 			.point--9 {
 				margin-left: grid(200, 880);
+				
+				@media screen and ( max-width: $tablet + px ) {
+					margin-left: grid(100, 880);
+				}
 			}
 		}
 		
@@ -122,6 +144,10 @@
 			
 			.point--7 {
 				margin-left: grid(200, 880);
+				
+				@media screen and ( max-width: $tablet + px ) {
+					margin-left: grid(100, 880);
+				}
 			}
 		}
 	}
