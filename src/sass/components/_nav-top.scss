@@ -72,19 +72,19 @@
 		background-color: $c-gray--brightest;
 		overflow: scroll;
 		-webkit-overflow-scrolling: touch;
-		opacity: 0;
+		//opacity: 0;
 		padding-top: 160px;
-		
+
 		&.is-active {
 			visibility: visible;
 			left: 0;
 			opacity: 1;
 		}
-		
+
 		&__menu {
 			margin-bottom: 60px;
 			text-align: center;
-			
+
 			li {
 				&:last-child {
 					padding-top: 20px;

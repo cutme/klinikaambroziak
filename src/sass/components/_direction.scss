@@ -32,6 +32,15 @@
 		transform: translateX(-50%);
 		text-align: center;
 		white-space: nowrap;
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			&--middle {
+				left: calc(50% + 15px);
+				bottom: -14px;
+				transform: none;
+				text-align: left;
+			}
+		}
 	}
 	
 	.o-biglead {
@@ -66,7 +75,19 @@
 		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
 			font-size: em(18);
 		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			margin-bottom: 60px;
+			
+			&--piaseczno {
+				margin-bottom: 100px !important;
+			}
+		}
+		
+		
 	}
+	
+	
 	
 	&__line {
 		display: flex;
@@ -83,6 +104,14 @@
 			}
 		}
 		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			flex-direction: column;
+			width: 1px;
+			height: auto;
+			margin: 0 auto 100px auto;
+			padding: 0;
+		}
+		
 		&--warszawa {
 			justify-content: space-between;
 			padding-right: grid(80, 880);
@@ -90,62 +119,116 @@
 			.point--1 {
 				margin-left: 20px;
 			}
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				
+				height: 190px;
+				
+				.point {
+					white-space: nowrap;
+				}
+
+				.point--1 {
+					margin: 0;
+				}
+				
+				.point--3 .tooltip {
+					bottom: -30px !important;
+				}
+			}
 		}
 		
-		&--piaseczno1 {
-			.point--2,
-			.point--5,
-			.point--7 {
-				margin-left: grid(10, 880);
+		&--piaseczno1,
+		&--piaseczno2 {
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				height: 510px;
+				margin-bottom: 150px;
+				justify-content: space-between;
+			}
+		}
+		
+		&--piaseczno1 {			
+
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+				.point--2,
+				.point--5,
+				.point--7 {
+					margin-left: grid(10, 880);
+				}
+				
+				.point--3 {
+					margin-left: grid(30, 880);
+				}
+				
+				.point--4 {
+					margin-left: grid(80, 880);
+				}
+				
+				.point--6 {
+					margin-left: grid(140, 880);
+				}
+				
+				.point--8 {
+					margin-left: grid(30, 880);
+				}
+				
+				.point--9 {
+					margin-left: grid(200, 880);
+				}
 			}
 			
-			.point--3 {
-				margin-left: grid(30, 880);
-			}
-			
-			.point--4 {
-				margin-left: grid(80, 880);
-			}
-			
-			.point--6 {
-				margin-left: grid(140, 880);
-			}
-			
-			.point--8 {
-				margin-left: grid(30, 880);
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				.point--9 .tooltip {
+					bottom: -30px;
+				}
 			}
 			
 			.point--9 {
-				margin-left: grid(200, 880);
-				
-				@media screen and ( max-width: $tablet + px ) {
+				@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $tablet + px ) {
 					margin-left: grid(100, 880);
 				}
 			}
 		}
 		
 		&--piaseczno2 {
-			.point--2,
-			.point--5 {
-				margin-left: grid(10, 880);
+			
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+				.point--2,
+				.point--5 {
+					margin-left: grid(10, 880);
+				}
+				
+				.point--3 {
+					margin-left: grid(30, 880);
+				}
+				
+				.point--4 {
+					margin-left: grid(265, 880);
+				}
+				
+				.point--6 {
+					margin-left: grid(30, 880);
+				}
+				
+				.point--7 {
+					margin-left: grid(200, 880);
+				}
 			}
 			
-			.point--3 {
-				margin-left: grid(30, 880);
-			}
-			
-			.point--4 {
-				margin-left: grid(265, 880);
-			}
-			
-			.point--6 {
-				margin-left: grid(30, 880);
+			@media screen and ( max-width: $tablet_portrait + px ) {
+								
+				.point--4 .tooltip {
+					bottom: -5px;
+				}
+				
+				.point--7 .tooltip {
+					bottom: -30px;
+				}
 			}
 			
 			.point--7 {
-				margin-left: grid(200, 880);
 				
-				@media screen and ( max-width: $tablet + px ) {
+				@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $tablet + px ) {
 					margin-left: grid(100, 880);
 				}
 			}
