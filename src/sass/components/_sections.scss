@@ -23,6 +23,10 @@
 		@media screen and ( max-width: $tablet_portrait + px ) {
 			margin-bottom: 20px;
 		}
+		
+		@media screen and ( max-width: $smartphone_portrait + px ) {
+			padding-top: 200px;
+		}
 	}
 	
 	.o-lead {
