@@ -1,9 +1,5 @@
 $cols__col:	600;
 
-.stellar-holder {
-	position: relative;
-}
-
 .o-2cols {
 	@extend %clear;
 	@extend %wrap;
@@ -29,6 +25,8 @@ $cols__col:	600;
 	}
 	
 	&__col {
+	
+		
 
 		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
 			float: left;
@@ -191,3 +189,9 @@ $cols__col:	600;
 		padding-bottom: 60px;
 	}
 }
+/*
+
+.parallax {
+	transform: translateX(-20%) translateZ(.4px) scale(.6) translateY(-220px);
+}
+*/
