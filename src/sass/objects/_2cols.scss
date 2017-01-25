@@ -25,9 +25,6 @@ $cols__col:	600;
 	}
 	
 	&__col {
-	
-		
-
 		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
 			float: left;
 			width: grid($cols__col);
@@ -189,9 +186,10 @@ $cols__col:	600;
 		padding-bottom: 60px;
 	}
 }
-/*
+
 
 .parallax {
-	transform: translateX(-20%) translateZ(.4px) scale(.6) translateY(-220px);
+	@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+		transform: translateX(-10%) translateZ(.2px) scale(.8) translateY(-220px);
+	}
 }
-*/

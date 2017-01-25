@@ -12,11 +12,11 @@
 		amb.Slider.init();
 		amb.Helper.isInView();
 
-		amb.Helper.isInView();
 		amb.Helper.exist('#longbox') && amb.Longbox.init();
 		amb.Helper.exist('#map') && amb.googleMap.init();
-		amb.Helper.exist('#team') && amb.Team.init();		
-
+		amb.Helper.exist('#team') && amb.Team.init();	
+		
+		$("#container").niceScroll();
 	});
 
 }(window, document, jQuery, window.amb = window.amb || {}));

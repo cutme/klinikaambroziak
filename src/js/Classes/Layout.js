@@ -10,7 +10,9 @@
     };
     
     function showOnScroll() {
-	    window.addEventListener('scroll', function() {
+    	var body = $('#container');
+		
+		body.on('scroll', function() {
 	        $('.anim').each( function(){
 				var bottomOfObject = $(this).offset().top,
 		          	bottomOfWindow = $(window).scrollTop() + $(window).height();
@@ -26,6 +28,7 @@
     	var bottomOfWindow = $(window).scrollTop() + $(window).height();
 
 	    $(".lazy").Lazy({
+	    	appendScroll: $('#container'),
 			afterLoad: function(element) {
 				var $$ = $(element);
 				
