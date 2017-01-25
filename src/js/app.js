@@ -18,7 +18,5 @@
 		amb.Helper.exist('#team') && amb.Team.init();		
 
 	});
-		
+
 }(window, document, jQuery, window.amb = window.amb || {}));
-
-

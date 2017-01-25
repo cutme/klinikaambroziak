@@ -16,6 +16,8 @@
   ],
   "dependencies": {
     "owl.carousel": "^2.2.0",
-    "jquery-lazy": "^1.7.4"
+    "jquery-lazy": "^1.7.4",
+    "jquery.stellar": "^0.6.2",
+    "jquery-migrate": "http://code.jquery.com/jquery-migrate-3.0.0.js"
   }
 }

@@ -1,5 +1,9 @@
 $cols__col:	600;
 
+.stellar-holder {
+	position: relative;
+}
+
 .o-2cols {
 	@extend %clear;
 	@extend %wrap;

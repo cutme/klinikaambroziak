@@ -9,7 +9,8 @@
   "author": "bartosz mediger <cutme.pl>",
   "license": "ISC",
   "dependencies": {
-    "gulp-util": "^3.0.7"
+    "gulp-util": "^3.0.7",
+    "skrollr": "^0.6.26"
   },
   "devDependencies": {
     "gulp-group-css-media-queries": "^1.2.0"

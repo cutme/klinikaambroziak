@@ -25,7 +25,7 @@
 	Map.prototype.init = function() {
 		this.showMap();
 		this.events();
-	}
+	};
     
     Map.prototype.showMap = function(lat, lng) {
 
