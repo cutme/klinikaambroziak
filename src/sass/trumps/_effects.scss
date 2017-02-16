@@ -142,6 +142,7 @@
 }
 
 .anim {
+	will-change: transform, opacity;
 	transform: translateY(100px);
 	opacity: 0;
 	

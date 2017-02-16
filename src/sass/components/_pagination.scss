@@ -1,0 +1,32 @@
+.pagination {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 100px;
+	
+	li {
+		margin: 2px;
+		
+		&.disabled {
+			display: none;
+		}
+	}
+	
+	a {
+		display: block;
+		width: 60px; height: 60px;
+		background-color: $c-gray--brightest;
+		line-height: 60px;
+		text-align: center;
+		color: $c-black;
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			width: 40px; height: 40px;
+			line-height: 40px;
+		}
+		
+		&:hover {
+			background-color: darken( $c-gray--brightest, 10% );
+		}
+	}
+}
