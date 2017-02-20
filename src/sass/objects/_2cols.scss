@@ -31,7 +31,11 @@ $cols__col:	600;
 			padding: 0 grid($padding);
 			
 			&--right {
-				padding-top: 170px;
+				padding-top: 100px;
+				
+				@media screen and ( min-width: $tablet + 1 + px ) {
+					padding-top: 170px;
+				}
 			}
 		}
 	}
@@ -189,7 +193,7 @@ $cols__col:	600;
 
 
 .parallax {
-	@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+	@media screen and ( min-width: $tablet + 1 + px ) {
 		transform: translateX(-10%) translateZ(.2px) scale(.8) translateY(-220px);
 	}
 }

@@ -19,7 +19,7 @@
 		
 		.c-about__sections & {
 			background-color: $c-gray--darker;
-		}
+		}		
 		
 		@media screen and ( max-width: $tablet + px ) {
 			height: 30px;			
@@ -39,6 +39,12 @@
 		
 		@media screen and ( max-width: $tablet + px ) {
 			top: -50px;
+		}
+	}
+	
+	&.color-white {
+		&:after, &:before {
+			background-color: white !important;
 		}
 	}
 
@@ -103,7 +109,11 @@
 			
 			@media screen and ( max-width: $tablet_portrait + px ) {				
 				font-size: em(26);
-			}		
+			}
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				letter-spacing: 3px;
+			}
 		}
 		
 		@media screen and ( max-width: $tablet_portrait + px ) {

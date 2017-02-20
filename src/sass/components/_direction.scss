@@ -1,5 +1,6 @@
 .c-direction {
 	@extend %rel;
+	@extend %clear;
 
 	.dot {
 		display: block;

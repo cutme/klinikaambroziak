@@ -15,6 +15,7 @@
 		amb.Helper.exist('#longbox') && amb.Longbox.init();
 		amb.Helper.exist('#map') && amb.googleMap.init();
 		amb.Helper.exist('#team') && amb.Team.init();	
+		amb.Helper.exist('.js-niceSelect') && amb.Helper.ns();
 		
 		$("#container").niceScroll();
 	});

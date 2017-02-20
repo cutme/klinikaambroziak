@@ -1,0 +1,57 @@
+.c-filters {
+	@extend %clear;
+	padding-top: 40px;
+	
+	&__item {
+		float: left;
+		position: relative;
+		width: grid(355);
+		margin-bottom: 10px;
+		
+		&--promo {			
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+				padding: {
+					left: 40px;
+					top: 10px;
+				}
+			}
+		}
+		
+		&--search {
+			float: right;
+
+			input[type=text] {
+				@extend %rel;
+				height: 42px;
+				padding: 0 50px 0 20px;
+				border: 1px solid #d4cdc6;
+				border-radius: 2px;
+				font-size: em(14);
+			}
+			
+			button[type=submit] {
+				position: absolute;
+				right: 10px; top: 5px;
+				font-size: em(22);
+				cursor: pointer;
+				color: $c-gray--darker;
+				
+				&:hover {
+					color: $c-black;
+				}
+			}
+			
+				
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			float: none;
+			width: 100%;
+			@include clear;
+		}
+	}
+
+	&__select {
+		
+	}
+}

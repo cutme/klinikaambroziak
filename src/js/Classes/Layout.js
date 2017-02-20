@@ -10,9 +10,15 @@
     };
     
     function showOnScroll() {
-    	var body = $('#container');
+    	var body;
+
+		body = ( $(window).width() > 1024 ) ? $('#container') : $(window);
+
+    	body.on('resize', function() {
+    		body = ( $(window).width() > 1024 ) ? $('#container') : $(window);
+    	});
 		
-		body.on('scroll', function() {
+		body.on('scroll', function() {		
 	        $('.anim').each( function(){
 				var bottomOfObject = $(this).offset().top,
 		          	bottomOfWindow = $(window).scrollTop() + $(window).height();

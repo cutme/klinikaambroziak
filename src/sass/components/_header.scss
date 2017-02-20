@@ -15,6 +15,10 @@
 		}
 	}
 	
+	@media screen and ( max-width: $smartphone + px ) {
+		background-position: 60% bottom;
+	}
+	
 	&--low {
 		height: 415px;
 		background-position: center top;
@@ -47,6 +51,7 @@
 
 	&--map {
 		margin-bottom: 60px;
+
 	}
 	
 	.o-lead__medium {

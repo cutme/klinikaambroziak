@@ -5,29 +5,73 @@
 		background: {
 			image: url(../img/about/onas-zapraszamy.jpg);
 			position: center;
+			repeat: no-repeat;
+			color: #f6f5f3;
 		}
-		height: 575px;
 		margin-bottom: 40px;
+		
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+			height: 575px;
+			
+		}
+		
+		.o-media {
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				max-width: 200px;
+			}
+		}
 		
 		.o-wrap {
 			@extend %rel;
+		}		
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			min-height: 470px;
+			
+			background: {
+				image: url(../img/about/onas-zapraszamy--mobile.jpg);
+				position: center;
+			}
 		}
 		
 		article {
-			@extend %vcenter;
 			display: block;
-			left: 675px;
-			width: 380px;
+			
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+				position: absolute;
+				left: grid(675);
+				transform: translateY(-50%);
+				top: 50%;
+				width: grid(380);
+			}
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				padding: 40px;
+				text-align: center;
+			}
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				padding: 20px;
+			}
 			
 			h4 {
 				margin-bottom: 1em;
 				line-height: 1.2;
 				font-size: em(34);
+				
+				@media screen and ( max-width: $tablet_portrait + px ) {
+					margin-bottom: .6em;
+					font-size: em(24);
+				}
 			}
 			
 			p {
 				margin-bottom: 1em;
 				font-size: em(16);
+				
+				@media screen and ( max-width: $smartphone + px ) {
+					font-size: em(12);
+				}
 			}
 		}
 	}
@@ -179,24 +223,49 @@
 		margin-bottom: 40px;
 		
 		li {
-			&:nth-child(1) a,
-			&:nth-child(2) a,
-			&:nth-child(3) a {
-				border-bottom: none;
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+			
+				width: grid(400);
+	
+				&:nth-child(1) a,
+				&:nth-child(2) a,
+				&:nth-child(3) a {
+					border-bottom: none;
+				}
+				
+				&:nth-child(3n+2) a {
+					border-left: none;
+					border-right: none;
+				}
 			}
 			
-			&:nth-child(3n+2) a {
-				border-left: none;
-				border-right: none;
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				border-bottom: 1px solid $c-gray--brighter;
+			}
+			
+			&:first-child {
+				@media screen and ( max-width: $tablet_portrait + px ) {
+					border-top: 1px solid $c-gray--brighter;
+				}
 			}
 		}
 		
 		a {
 			@extend %rel;
 			display: block;
-			width: 400px; height: 294px;
+			width: 100%; 
 			background-color: white;
 			border: 1px solid $c-gray--brighter;
+			
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+				height: 294px;
+			}
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				padding: 40px 20px;
+				border: none;
+			}
+			
 			
 			&:before {
 				@extend %icomoon;
@@ -205,6 +274,11 @@
 				right: 15px; bottom: 15px;
 				z-index: 10;
 				content: "\e900";
+				
+				@media screen and ( max-width: $tablet_portrait + px ) {
+					bottom: 50%;
+					transform: translateY(50%);
+				}
 			}			
 			
 			&:hover {
@@ -228,11 +302,28 @@
 		}
 
 		li {
-			float: left;
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+				float: left;
+			}
 		}
 		
 		.o-lead {
-			@extend %center-middle;
+
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+				position: absolute;
+				left: 50%; top: 50%;
+				transform: (translateX(-50%) translateY(-50%));
+			}
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				position: relative;
+				transform: none;
+				top: auto;
+				
+				&:after, &:before {
+					display: none;
+				}
+			}
 			
 			&:after {
 				display: none;
@@ -242,6 +333,16 @@
 				white-space: nowrap;
 				font-size: em(28);
 				letter-spacing: 6px;
+				
+				@media screen and ( max-width: $tablet + px ) {
+					font-size: em(24);
+					letter-spacing: 3px;
+				}
+				
+				@media screen and ( max-width: $tablet_portrait + px ) {
+					font-size: em(20);
+				}
+				
 			}			
 		}
 	}

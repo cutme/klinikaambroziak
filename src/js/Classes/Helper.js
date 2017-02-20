@@ -6,7 +6,8 @@
             exist: exist,
             goToTarget: goToTarget,
             isInView: isInView,
-            isWindowSmallerThan: isWindowSmallerThan
+            isWindowSmallerThan: isWindowSmallerThan,
+            ns: ns
         };
     };
 
@@ -36,6 +37,10 @@
 	function isWindowSmallerThan(resBorder) {
         return window.innerWidth < parseInt(resBorder, 10);
     }
+    
+    function ns() {
+		$('.js-niceSelect').removeClass('is-hidden').niceSelect();
+	}
 	
 	amb.Helper = new Helper();
 

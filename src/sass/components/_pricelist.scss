@@ -1,0 +1,85 @@
+.c-pricelist {	
+	@extend %rel;
+	width: 100%;
+	margin-bottom: 100px;
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		left: -20px; right: -20px;
+		width: calc(100% + 40px);
+		font-size: 90%;
+		overflow: hidden;
+	}
+	
+	
+	thead {
+		tr {
+			th {
+				font-weight: $bold;
+				
+				&:first-of-type {
+					padding-left: grid(55);
+				}
+			}
+		}
+	}
+	
+	th {
+		padding: {
+			top: 35px;
+			bottom: 35px;
+		}
+	}
+	
+	tbody {
+		border-left: 1px solid #d7d0cb;
+		border-right: 1px solid #d7d0cb;
+
+		tr {
+			th, td {
+				border-bottom: 1px solid #d7d0cb;
+			}
+			
+			td {
+				text-align: left;
+				padding: {
+					top: 20px;
+					bottom: 20px;
+				}
+				font: {
+					size: em(16);
+					weight: $medium;
+				}
+				
+				&:first-child {
+					padding: {
+						left: grid(55);
+						right: 55px;
+					}
+					font-size: em(14);
+					
+					@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+						width: 50%;
+					}
+					
+				}
+				
+				&:nth-last-child(2) {
+					white-space: nowrap;
+				}
+			}
+			
+			th {
+				background-color: $c-gray--brightest;
+				font: {
+					size: em(22);
+					weight: $black;
+				}
+				
+				&:first-of-type {
+					text-transform: uppercase;
+					padding-left: grid(55);
+				}
+			}
+		}
+	}
+}

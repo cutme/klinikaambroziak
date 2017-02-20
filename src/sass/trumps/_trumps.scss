@@ -120,9 +120,10 @@ a.underline {
 
 #container {
 	position: relative;
-	height: 100%;
+	//
 	
-	@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+	@media screen and ( min-width: $tablet + 1 + px ) {
+		height: 100%;
 		perspective: 1px;
 		transform-style: preserve-3d;
 	}
