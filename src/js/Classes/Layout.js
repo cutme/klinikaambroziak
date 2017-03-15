@@ -10,13 +10,15 @@
     };
     
     function showOnScroll() {
-    	var body;
+    	var body = $('#container');
 
+/*
 		body = ( $(window).width() > 1024 ) ? $('#container') : $(window);
 
     	body.on('resize', function() {
     		body = ( $(window).width() > 1024 ) ? $('#container') : $(window);
     	});
+*/
 		
 		body.on('scroll', function() {		
 	        $('.anim').each( function(){

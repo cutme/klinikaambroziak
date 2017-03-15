@@ -17,7 +17,7 @@
 		amb.Helper.exist('#team') && amb.Team.init();	
 		amb.Helper.exist('.js-niceSelect') && amb.Helper.ns();
 		
-		$("#container").niceScroll();
+//		$("#container").niceScroll();
 	});
 
 }(window, document, jQuery, window.amb = window.amb || {}));

@@ -16,7 +16,6 @@
   ],
   "dependencies": {
     "owl.carousel": "^2.2.0",
-    "jquery-lazy": "^1.7.4",
-    "jquery.nicescroll": "^3.6.8"
+    "jquery-lazy": "^1.7.4"
   }
 }

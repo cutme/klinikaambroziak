@@ -29,4 +29,8 @@
 			background-color: darken( $c-gray--brightest, 10% );
 		}
 	}
+	
+	.active a {
+		background-color: darken( $c-gray--brightest, 20% );
+	}
 }
