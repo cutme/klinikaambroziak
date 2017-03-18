@@ -1,6 +1,10 @@
 .c-sections {
 	@extend %clear;
 	margin-bottom: 40px;
+	
+	@media screen and ( max-width: $smartphone_portrait + px ) {
+		margin-bottom: 0;
+	}
 
 	&__item {
 		@extend %rel;
@@ -24,8 +28,10 @@
 			margin-bottom: 20px;
 		}
 		
-		@media screen and ( max-width: $smartphone_portrait + px ) {
-			padding-top: 200px;
+		.c-sections--contact & {
+			@media screen and ( max-width: $smartphone_portrait + px ) {
+				padding-top: 200px; 
+			}
 		}
 	}
 	

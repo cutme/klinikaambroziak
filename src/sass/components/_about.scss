@@ -11,9 +11,13 @@
 		margin-bottom: 40px;
 		
 		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
-			height: 575px;
-			
+			height: 575px;	
 		}
+		
+		@media screen and ( max-width: $smartphone_portrait + px ) {
+			margin-bottom: 20px;
+		}
+
 		
 		.o-media {
 			@media screen and ( max-width: $tablet_portrait + px ) {
@@ -96,6 +100,10 @@
 			@media screen and ( max-width: $tablet_portrait + px ) {
 				height:85%;
 			}
+			
+			@media screen and ( max-width: $smartphone_portrait + px ) {
+				width: 80%;
+			}
 		}
 		
 		br {
@@ -113,6 +121,7 @@
 		}
 		
 		&:nth-child(odd) {
+
 			@media screen and ( min-width: $tablet_portrait + 1 + px ) {
 				.c-about__image {
 					float: right;
@@ -149,6 +158,11 @@
 
 			&:before {
 				left: 0;
+				
+				@media screen and ( max-width: $smartphone_portrait + px ) {
+					left: auto;
+					right: 0;
+				}
 			}
 			
 			.o-biglead {
