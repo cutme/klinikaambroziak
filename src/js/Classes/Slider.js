@@ -56,6 +56,12 @@
 			$title.fadeOut(100);
 		});
 		
+		$('.owl-item', owl).on('click', function(e) {
+			e.preventDefault();
+			var target = $('.c-header', this).data('url');
+			window.open(target,'_self');
+		});
+		
 		this.events(owl);
     };
 

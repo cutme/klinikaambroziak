@@ -45,9 +45,9 @@
 						myOptions = {
 							center: new google.maps.LatLng(lat,lng),
 							disableDefaultUI: true,
-							draggable: false,
+							draggable: true,
 							mapTypeId: google.maps.MapTypeId.ROADMAP,
-							scrollwheel: false,
+							scrollwheel: true,
 							streetViewControl: false,
 							styles: mapStyle,
 							zoom: 15

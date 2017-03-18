@@ -62,7 +62,7 @@
 }
 
 .no-scroll {
-	overflow: hidden;
+	overflow: hidden !important;
 }
 
 .perspective {
@@ -120,11 +120,17 @@ a.underline {
 
 #container {
 	position: relative;
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
+	
+	@media screen and ( max-width: $tablet + px ) {
+		padding-top: 100px;
+	}
 	//
 	
-	@media screen and ( min-width: $tablet + 1 + px ) {
+	//@media screen and ( min-width: $tablet + 1 + px ) {
 		height: 100%;
 		perspective: 1px;
 		transform-style: preserve-3d;
-	}
+	//}
 }

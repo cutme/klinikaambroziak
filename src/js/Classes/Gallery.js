@@ -23,10 +23,16 @@
 	};
 	
 	Gallery.prototype.overlay = function() {
-		var g = document.getElementById('gallery');
+		var g = document.getElementById('gallery'),
+			c = document.getElementById('container');
 		
 		$('.c-gallery-fullscreen__info', g).hide();
 		$(g).addClass('is-visible');
+		$(c).addClass('no-scroll');
+		
+		$(g).css('top', $(c).scrollTop());
+		
+//		console.log( $('#container').scrollTop() );
 	};
 	
 	Gallery.prototype.carousel = function(index) {
@@ -72,6 +78,7 @@
     
     Gallery.prototype.close = function() {
 		var g = document.getElementById('gallery'),
+			c = document.getElementById('container'),
 			owl = $('.owl-carousel', g);
 
 		owl.trigger('destroy.owl.carousel');
@@ -81,6 +88,7 @@
 		owl.off('changed.owl.carousel');
 		
 		$(g).removeClass('is-visible');
+		$(c).removeClass('no-scroll');
 		
 		$('body').removeClass('no-scroll');
 	};

@@ -110,6 +110,10 @@
 		color: #a99b8e;
 	}
 	
+	.owl-stage-outer {
+		height: 100vh;
+	}
+	
 	&.is-visible {
 		display: block;
 		//opacity: 1;

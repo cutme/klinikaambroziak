@@ -36,7 +36,10 @@
 		}
 		
 		p {
-			font-size: em(34);
+			font: {
+				family: $serif;
+				size: em(34);
+			}
 		}
 	}
 	
@@ -108,7 +111,6 @@
 			
 			p {
 				font: {
-					family: $serif;
 					size: em(20);
 				}
 			}

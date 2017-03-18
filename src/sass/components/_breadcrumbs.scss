@@ -9,6 +9,13 @@
 		weight: $medium;
 	}
 	
+	@media screen and ( max-width: $grid-base-width + px ) {
+		padding: {
+			left: 20px;
+			bottom: 20px;
+		}
+	}
+
 	@media screen and ( max-width: $tablet_portrait + px ) {
 		letter-spacing: 1px;
 		font-size: em(10);
@@ -37,7 +44,9 @@
 		}
 	}
 
-	&__item {		
+	&__item {
+		margin-right: 6px;
+	
 		span {
 			@extend %underline;	
 		}
@@ -62,11 +71,4 @@
 		border-bottom: 1px solid rgba($c-gray--darker, .5);
 	}
 	
-	@media screen and ( max-width: $grid-base-width + px ) {
-		padding: {
-			//left: 20px;
-			//top: 20px;
-			bottom: 20px;
-		}
-	}
 }

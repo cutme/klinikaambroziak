@@ -3,15 +3,13 @@ body {
 		color: white;
 		repeat: no-repeat;
 	}
+	overflow: hidden;
 	
 	/*
 perspective: 1px;
 	overflow-y: scroll;
 */
-	
-	@media screen and ( max-width: $tablet + px ) {
-		padding-top: 100px;
-	}
+
 }
 
 body,

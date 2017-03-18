@@ -14,7 +14,7 @@
 	&__link {
 		@extend %rel;
 		@extend %vline;
-		display: block;
+		display: inline-block;
 
 		&:before {
 			opacity: 0;
