@@ -54,6 +54,10 @@
 		font-weight: $black;
 		line-height: 1.2;
 	}
+	
+	&__buttons {
+		padding-top: 20px;
+	}
 
 	&__medium {
 		opacity: .35;
@@ -128,6 +132,12 @@
 	
 	.c-header--apla & {
 		width: 50%;
+	}
+	
+	&--appointment {
+		p {
+			margin-bottom: 10px;
+		}
 	}
 	
 	&--full {
