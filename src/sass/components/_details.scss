@@ -4,12 +4,20 @@
 		top: 60px;
 		bottom: 60px;
 	}
-	
-	article {
-		width: 654px;
+
+	@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+		padding-left: 75px;
+		
+		article {
+			max-width: 654px;
+		}
 	}
 
-	padding: {
-		left: 75px;
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		padding: {
+			left: 20px;
+			right: 20px;
+		}
 	}
+	
 }
