@@ -91,6 +91,10 @@ input {
 		}
 	}
 	
+	&__error {
+		padding: 5px 20px;
+	}
+	
 	&__row {
 		@extend %clear;
 		margin-bottom: 10px;

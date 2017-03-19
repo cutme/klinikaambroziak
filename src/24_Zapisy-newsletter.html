@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--@include('includes/head.html')-->
+<body>  
+
+<div id="container">
+
+	<!--@include('includes/top.html')-->
+
+	<div class="c-header lazy" data-src="http://beta.klinikaambroziak.pl/_pliki_/strony/14873392497863.jpg">
+		<div class="c-breadcrumbs">
+			<a href="/pl/" class="c-breadcrumbs__item"><span>Strona główna</span></a><span class="c-breadcrumbs__item c-breadcrumbs__item--current">Newsletter</span>
+		</div>
+	
+		<div class="o-wrap o-wrap--fullheight">
+			<div class="o-lead anim">
+				<h3 class="o-lead__big">Newsletter</h3>
+				<h4 class="o-lead__medium serif">Zapisz się do newslettera</h4>
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="bg--blue--brightest anim">
+		<div class="o-wrap o-typo o-typo--cols">
+
+<!--
+
+			<div id="komunikat" class="c-newsletter-form">
+				Dziękujemy. Na podany przez Ciebie adres został wysłany email z prośbą o potwierdzenie adresu e-mail.
+			</div>
+	
+-->
+
+
+			<div id="form" class="o-form c-newsletter-form">
+				<form action="/newsletter/zapisz/" method="post">
+					<fieldset>
+						
+						<div class="o-form__row">
+							<input id="f_email" type="text" name="email" value="" placeholder="Adres e-mail" autocomplete="off" />
+							
+							<div class="o-form__error">
+							Proszę wpisać prawidłowy adres e-mail.
+							</div>
+						</div>
+						
+						<div class="o-form__row">						
+							<button type="submit" class="o-btn o-btn--white">zapisz się</button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+	
+	
+	    </div>
+	</div>
+
+
+
+	<!--@include('includes/contactbar.html')-->
+	<!--@include('includes/footer.html')-->
+		
+</div>	
+
+</body>
+</html>

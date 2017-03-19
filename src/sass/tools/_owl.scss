@@ -122,4 +122,10 @@
 			}
 		}
 	}
+	
+	.owl-item {
+		#homeSlider & {
+			cursor: pointer;
+		}
+	}
 }
