@@ -42,8 +42,6 @@
 				
 				$$.addClass('is-loaded');
 				
-				//console.log(bottomOfWindow + ' ' + $(element).offset().top);
-				
 				if ( $$.offset().top < bottomOfWindow ) {
 				
 					setTimeout(function() { 

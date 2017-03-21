@@ -47,7 +47,7 @@
 							disableDefaultUI: true,
 							draggable: true,
 							mapTypeId: google.maps.MapTypeId.ROADMAP,
-							scrollwheel: true,
+							scrollwheel: false,
 							streetViewControl: false,
 							styles: mapStyle,
 							zoom: 15

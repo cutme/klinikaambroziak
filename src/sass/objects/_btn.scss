@@ -13,7 +13,10 @@
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	cursor: pointer;
-	transform: perspective(1px) translateZ(0);
+	
+	.is-desktop & {
+		transform: perspective(1px) translateZ(0);
+	}
 
 	&:after {
 		@extend %abs-after;

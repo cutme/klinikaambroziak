@@ -189,12 +189,17 @@ $cols__col:	600;
 	@media screen and ( max-width: $tablet_portrait + px ) {
 		padding-bottom: 60px;
 	}
+	
+	&--offer {
+		margin-bottom: -440px;
+	}
 }
 
 
 .parallax {
 	@media screen and ( min-width: $tablet + 1 + px ) {
 		transform: translateX(-10%) translateZ(.2px) scale(.8) translateY(-220px);
-		margin-bottom: -440px;
 	}
+	
+	
 }

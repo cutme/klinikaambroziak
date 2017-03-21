@@ -6,6 +6,7 @@
             exist: exist,
             goToTarget: goToTarget,
             isInView: isInView,
+            isMobile: isMobile,
             isWindowSmallerThan: isWindowSmallerThan,
             ns: ns
         };
@@ -29,9 +30,17 @@
 		
 		$('header.anim, div.anim, li.anim, ul.anim').each(function() {
 			if ( $(this).offset().top < bottomOfWindow ) {
-				$(this).addClass('is-visible');
+				//$(this).addClass('is-visible');
 			}
 		});
+	}
+	
+	function isMobile() {
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			$('html').addClass('is-mobile');
+		} else {
+			$('html').addClass('is-desktop');
+		}
 	}
 	
 	function isWindowSmallerThan(resBorder) {

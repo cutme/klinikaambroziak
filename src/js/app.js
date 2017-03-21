@@ -11,6 +11,7 @@
 		amb.Nav.init();
 		amb.Slider.init();
 		amb.Helper.isInView();
+		amb.Helper.isMobile();
 
 		amb.Helper.exist('#longbox') && amb.Longbox.init();
 		amb.Helper.exist('#map') && amb.googleMap.init();
