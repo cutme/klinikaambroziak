@@ -1,0 +1,73 @@
+.c-404 {
+	@extend %rel;
+	width: 100%;
+	height: 100%;
+	background-color: $c-pink--brighter;
+
+	&__text,
+	&__photo {		
+		@media screen and ( min-width: $tablet + 1 + px ) {
+			position: absolute !important;
+			top: 0;
+			width: 50%;
+			height: 100%;
+		}
+		
+		@media screen and ( max-width: $tablet + px ) {
+			position: relative;
+			height: 50vh;
+		}
+	}
+	
+	&__text {
+		@media screen and ( min-width: $tablet + 1 + px ) {
+			left: 0;
+		}
+	}
+	
+	&__photo {
+		right: 0;
+		background-size: cover;
+		
+		@media screen and ( max-width: $tablet + px ) {
+			background: {
+				position: center 70%;
+			}
+		}
+	}
+	
+	.o-lead {
+		width: 100%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);		
+		
+		@media screen and ( min-width: 512px ) {
+			width: 512px;
+		}
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			&:before, &:after {
+				display: none;
+			}
+		}
+
+		.o-lead__big {
+			letter-spacing: 6px;
+			font-size: em(96);
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				font-size: em(44);
+			}
+		}
+		
+		.o-lead__medium {
+			margin-bottom: 30px;
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				font-size: em(18);
+			}
+		}
+	}
+	
+	
+}
