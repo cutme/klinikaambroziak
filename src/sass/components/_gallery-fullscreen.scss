@@ -94,6 +94,21 @@
 		}
 
 	.owl-item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		height: 100vh;
+		background: {
+			image: url(../img/assets/loading.svg);
+			repeat: no-repeat;
+			position: center;
+			size: 50px 50px;
+		}
+		
+		img {
+			@extend %rel;
+		}
+
 		img.portrait {
 			height: 100vh;
 			width: auto !important;
