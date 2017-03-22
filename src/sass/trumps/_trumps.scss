@@ -85,7 +85,10 @@
 }
 
 .serif {
-	font-family: $serif;
+	font: {
+		family: $serif;
+		weight: $bold;
+	}
 }
 
 .text-center {

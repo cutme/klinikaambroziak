@@ -29,6 +29,7 @@
 	}
 	
 	&__subscribe {
+		@extend %animfix;
 		color: $c-gray--darker;
 		
 		h5 {
@@ -39,6 +40,7 @@
 			font: {
 				family: $serif;
 				size: em(34);
+				weight: $bold;
 			}
 		}
 	}

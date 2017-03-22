@@ -37,6 +37,10 @@
 
 	    $(".lazy").Lazy({
 	    	appendScroll: $('#container'),
+			effect: "fadeIn",
+			effectTime: 500,
+			threshold: 0,
+			
 			afterLoad: function(element) {
 				var $$ = $(element);
 				
