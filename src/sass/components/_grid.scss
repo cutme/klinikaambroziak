@@ -16,6 +16,10 @@
 		padding: 1px 0;
 		cursor: pointer;
 		
+		img {
+			@extend %anim;
+		}
+		
 		&--landscape {
 			@media screen and ( min-width: $tablet_portrait + 1 + px ) {
 				float: left;

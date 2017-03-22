@@ -156,6 +156,10 @@
 		.is-loaded & {
 			animation: moveUpVerticalMiddle 0.65s ease forwards;
 		}
+		
+		.bg-beige--brighter & {
+			animation: moveUpVerticalMiddle 0.65s ease forwards;
+		}
 	}
 }
 
