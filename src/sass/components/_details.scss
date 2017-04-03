@@ -7,9 +7,16 @@
 
 	@media screen and ( min-width: $tablet_portrait + 1 + px ) {
 		padding-left: 75px;
+		padding-right: 20px;
 		
 		article {
 			max-width: 654px;
+		}
+		
+		&--full {
+			article {
+				max-width: 100%;
+			}
 		}
 	}
 

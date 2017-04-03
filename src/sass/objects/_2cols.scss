@@ -4,6 +4,7 @@ $cols__col:	600;
 	@extend %clear;
 	@extend %wrap;
 	z-index: 5;
+	transform-style: preserve-3d;
 	
 	.o-link {
 		@extend %abs;
@@ -31,14 +32,17 @@ $cols__col:	600;
 			padding: 0 grid($padding);
 			
 			&--right {
-				padding-top: 100px;
+				padding-top: 100px;				
+				
 				
 				@media screen and ( min-width: $tablet + 1 + px ) {
 					padding-top: 170px;
 				}
 			}
-		}
+		}		
 	}
+	
+	
 	
 	&__details {
 		@extend %abs; z-index: 100;
@@ -94,7 +98,7 @@ $cols__col:	600;
 			visibility: visible;
 		}
 	}
-	
+
 	&__item {
 		@extend %clear;
 		@extend %rel;
@@ -109,6 +113,15 @@ $cols__col:	600;
 			right: 15px; bottom: 15px;
 			z-index: 10;
 			content: "\e900";
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				right: grid(25, $cols__col);
+			}
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				//right: grid(25, $cols__col);
+			}
+			
 		}
 		
 		&.is-active {
@@ -125,7 +138,8 @@ $cols__col:	600;
 		}
 		
 		@media screen and ( max-width: $tablet_portrait + px ) {
-			max-width: $cols__col + px;
+			//max-width: $cols__col + px;
+			max-width: 565px;
 			margin: {
 				left: auto;
 				right: auto;
@@ -190,15 +204,20 @@ $cols__col:	600;
 		padding-bottom: 60px;
 	}
 	
-	&--offer {
-		margin-bottom: -440px;
+	.o-2cols__col--offer {
+		@media screen and ( min-width: $tablet + 1 + px ) {
+			margin-bottom: -440px;
+		}
 	}
+	
 }
 
 
 .parallax {
 	@media screen and ( min-width: $tablet + 1 + px ) {
 		transform: translateX(-10%) translateZ(.2px) scale(.8) translateY(-220px);
+		
+		
 	}
 	
 	
